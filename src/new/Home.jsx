@@ -34,9 +34,10 @@ import training1 from "./../assets/training1.png";
 import training2 from "./../assets/training2.png";
 import training3 from "./../assets/training3.png";
 import deal from "./../assets/deals.png";
-import study1 from "./../assets/study1.png";
-import study2 from "./../assets/study2.png";
-import study3 from "./../assets/study3.png";
+import study1 from "./../assets/redson1.jpg";
+import study2 from "./../assets/rebar1.png";
+import study3 from "./../assets/playground1.jpg";
+import study4 from "./../assets/heaven1.jpg";
 import test from './../assets/test.png'
 import j1 from "./../assets/dezeen-magazine-logo-vector.png";
 import j2 from "./../assets/space-logo.png";
@@ -294,7 +295,7 @@ export default function Home() {
         </nav>
       </section>
       <section className={style.start}>
-        <h3>Jefferson Life ( First Start )</h3>
+        <h3>First Start By Jefferson Life</h3>
         <div>
           <nav>
             <p>
@@ -452,6 +453,17 @@ export default function Home() {
             <p>
               The Playground is a classy relaxation centre with a rich dining
               experience and beach club relaxation centre
+            </p>
+            <Link to="/">
+              Read More <img src={exp} alt="" />{" "}
+            </Link>
+          </nav>
+          <nav>
+            <img src={study4} alt="" />
+            <h4>Heavens Bar</h4>
+            <p>
+              Heavens is a bar and lounge experience for nightlifers in Abuja.
+              It offers exotic drink and high-quality VIP service.
             </p>
             <Link to="/">
               Read More <img src={exp} alt="" />{" "}

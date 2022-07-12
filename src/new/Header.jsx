@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import style from "./../styles/newheader.module.css";
 import logo from "./../assets/Jefferson  logo.png";
-import icon1 from "./../assets/hos.png";
+import icon1 from "./../assets/hosnew.png";
 import icon2 from "./../assets/profile.svg";
 import icon3 from "./../assets/profile-circle.svg";
 import { NavLink, Outlet, useNavigate } from "react-router-dom";

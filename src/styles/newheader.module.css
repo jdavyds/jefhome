@@ -18,7 +18,7 @@
 }
 .prehead nav:first-of-type span:last-of-type {
   background: rgb(21, 22, 22);
-  padding: 7px;
+  padding: 10px;
   color: white;
   border-radius: 5px;
 }
@@ -32,10 +32,12 @@
 .prehead span {
   display: flex;
   align-items: center;
-  /* opacity: 0.6; */
 }
 .prehead nav:last-of-type {
-  /* color: linear-gradient(87.44deg, #f8a911 -9.19%, #7a0c2d 137.32%); */
+  background: linear-gradient(87.44deg, #F8A911 -9.19%, #7A0C2D 137.32%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   letter-spacing: 0.8px;
 }
 .prehead nav:first-of-type span:first-of-type {
@@ -43,7 +45,7 @@
   margin-right: 5px;
 }
 .prehead span img {
-  margin-right: 10px;
+  margin-right: 5px;
 }
 .main_head {
   display: flex;
@@ -164,7 +166,12 @@ header a:hover {
     margin: 0 5px;
   }
   .hamNav button {
-    background: rgb(248, 169, 17);
+    background: linear-gradient(
+    93.87deg,
+    #f8a911 -10.79%,
+    #680707 249.16%,
+    rgba(248, 169, 17, 0) 249.18%
+  );
     color: white;
     border: none;
     border-radius: 10px;
