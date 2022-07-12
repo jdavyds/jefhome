@@ -1,0 +1,185 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5;
+    font-size: 15px;
+    padding: 0 70px 50px 70px;
+    color: rgba(87, 83, 83, 1);
+}
+.footer main {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+}
+.footer_abt {
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer_abt img {
+    margin:  20px 0 30px;
+}
+.footer_abt a {
+    width: 100%;
+}
+.footer_abt a img {
+    height: 50px;
+}
+.footer_contact {
+    padding: 50px 30px 10px 20px;
+}
+.footer_contact h3 {
+    color: rgba(87, 83, 83, 1);
+    font-size: 20px;
+    margin: 10px 0;
+}
+.footer_contact p {
+    margin: 30px 0;
+    word-wrap: break-word;
+    width: 100%;
+}
+.footer_nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding-top: 115px;
+}
+.footer_nav nav {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    font-size: 14px;
+}
+.footer a {
+    margin: 10px 0;
+    text-decoration: none;
+    color: rgba(87, 83, 83, 1);
+    transition: color 0.3s ease-in-out;
+    -webkit-transition: color 0.3s ease-in-out;
+    -moz-transition: color 0.3s ease-in-out;
+    -ms-transition: color 0.3s ease-in-out;
+    -o-transition: color 0.3s ease-in-out;
+}
+.footer a:hover {
+    color: rgba(248, 169, 17, 1);
+}
+.footer section {
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
+}
+.footer section > nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    border-bottom: 2px solid;
+    position: relative;
+    font-size: 14px;
+}
+.footer section a{
+    margin: 10px;
+}
+.footer section div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+}
+.footer section span {
+    font-size: 14px;
+}
+.footer .socials {
+    position: absolute;
+    top: 15px;
+    right: 0;
+}
+.footer .socials img {
+    margin: 0 5px;
+}
+@media only screen and (max-width: 850px) { 
+.footer {
+    font-size: 14px;
+    padding-bottom: 0;
+    padding: 0;
+}
+.footer main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.footer_abt {
+    padding: 15px;
+    align-items: center;
+    justify-content: center;
+}
+.footer_abt a img {
+    margin: 20px 0;
+    height: 30px;
+}
+.footer_abt > img {
+    height: 80px;
+}
+.footer_contact {
+    padding: 15px;
+    width: 100%;
+}
+.footer_contact h3 {
+    font-size: 18px;
+    margin: 5px 0;
+}
+.footer_contact div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.footer_contact p {
+    margin: 13px 0;
+    width: 45%;
+    line-height: 1.6;
+}
+.footer_nav {
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer_nav nav {
+    width: 45%;
+    margin: 10px 0;
+}
+.footer section {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+.footer section > nav {
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    border-bottom: none;
+}
+.footer section div {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-top: 1px solid;
+    text-align: center;
+}
+.footer .socials {
+    margin: 15px 0;
+    position: unset;
+    top: unset;
+    right: unset;
+}
+.footer .socials img {
+    margin: 0 10px;
+}    
+.footer section span {
+    font-size: 12px;
+}
+}

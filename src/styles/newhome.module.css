@@ -1,0 +1,838 @@
+.hero {
+  height: 90vh;
+  padding: 100px 0 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(./../assets/newhero.png);
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  line-height: 1.4;
+}
+.hero h1 {
+  font-size: 60px;
+  color: #fff;
+}
+.hero b {
+  padding: 5px;
+  background-color: rgba(248, 169, 17, 1);
+}
+.hero p {
+  font-size: 20px;
+  color: #fff;
+}
+.hero nav {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+.hero_btn {
+  background: rgb(248, 169, 17);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  height: 45px;
+  width: fit-content;
+  padding: 0 15px;
+  font-size: 16px;
+}
+.hero_vid {
+  border: none;
+  border-radius: 10px;
+  height: 45px;
+  width: fit-content;
+  margin-left: 20px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  background: inherit;
+  color: white;
+}
+.hero_vid img {
+  height: 30px;
+  margin: 0 10px;
+}
+.hero nav:last-of-type {
+  margin: auto 0 0 0;
+}
+.hero nav:last-of-type img {
+  margin: 0 10px;
+  margin: 0 10px;
+}
+.partners {
+  width: 80%;
+  margin: 50px auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 30px;
+  box-shadow: 0 0 50px 0 rgb(245, 240, 240);
+}
+.partners small {
+  font-size: 18px;
+  opacity: 0.4;
+}
+.partners figure {
+  width: 100%;
+  height: 130px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  position: relative;
+}
+.partners figure img {
+  width: 120px;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.6s ease-in-out;
+}
+.partners figure img:hover {
+  transform: scale(1.7);
+  z-index: 111111;
+}
+.about {
+  padding: 0 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about h3 {
+  font-size: 30px;
+}
+.about div {
+  margin: 30px 0;
+  display: grid;
+  grid-template-columns: 35% 63%;
+  justify-content: space-between;
+}
+.about div nav:first-of-type {
+  width: 100%;
+  background-color: aquamarine;
+  display: flex;
+  flex-direction: column;
+}
+.about div nav:first-of-type img {
+  width: 100%;
+  height: auto;
+}
+.about div nav:first-of-type nav {
+  margin: 10px 0;
+  padding: 20px 0;
+  background-color: rgba(12, 16, 45, 1);
+  color: rgba(248, 169, 17, 1);
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.about div nav:first-of-type span {
+  padding: 20px;
+  line-height: 1.5;
+}
+.about nav b {
+  font-size: 30px;
+  color: white;
+}
+.about nav:last-of-type {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin: auto 0;
+  height: 90%;
+  background-color: rgba(49, 52, 53, 1);
+  border-radius: 20px;
+}
+.about nav p {
+  line-height: 1.7;
+  font-size: 16px;
+  color: white;
+  margin: 10px;
+}
+.about nav a {
+  background: inherit;
+  border: none;
+  margin: 30px auto;
+  padding: 10px;
+  height: 40px;
+  width: fit-content;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(248, 169, 17);
+}
+.about a img {
+  margin: 0 10px;
+  height: 18px;
+}
+.services {
+  padding: 40px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.services h3 {
+  font-size: 30px;
+}
+.services > div {
+  margin: 30px 0;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-content: space-between;
+}
+.services > div > nav {
+  padding-right: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.services > div > nav p {
+  font-size: 20px;
+}
+.services nav > img {
+  width: 100%;
+  height: auto;
+}
+.services h4 {
+  margin: 10px 0;
+  font-size: 20px;
+}
+.services p {
+  line-height: 1.7;
+  font-size: 16px;
+  color: #333;
+  margin: 10px 0;
+}
+.services a {
+  background: inherit;
+  border: none;
+  height: 40px;
+  width: fit-content;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(248, 169, 17);
+}
+.services a img {
+  margin: 0 10px;
+  height: 18px;
+}
+.serviceGrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 49% 49%;
+  justify-content: space-between;
+}
+.serviceGrid nav {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+.serviceGrid a {
+  margin: auto 0 20px 0;
+}
+.services > button {
+  background: inherit;
+  border: none;
+  border-radius: 10px;
+  border: 1px solid;
+  height: 40px;
+  padding: 10px;
+  margin: 20px 0;
+  width: fit-content;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(248, 169, 17);
+}
+.services button img {
+  margin: 0 10px;
+  height: 18px;
+}
+.invest {
+  padding: 40px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.invest h3 {
+  font-size: 30px;
+}
+.invest div {
+  margin: 30px 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 300px 300px 300px 300px;
+  justify-content: space-between;
+}
+.invest div nav {
+  display: flex;
+  flex-direction: column;
+}
+.invest div > img {
+  width: 100%;
+  height: auto;
+}
+.invest h4 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+.invest p {
+  line-height: 1.5;
+}
+.invest div a {
+  background: inherit;
+  border: none;
+  margin: 30px 0;
+  height: 40px;
+  width: fit-content;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(248, 169, 17);
+}
+.invest a img {
+  margin: 0 10px;
+  height: 18px;
+}
+.invest > nav {
+  display: flex;
+  align-items: center;
+}
+.invest > nav button {
+  width: fit-content;
+  height: 40px;
+  background: inherit;
+  border: none;
+  margin: 5px;
+}
+.invest button:first-of-type,
+.invest button:last-of-type {
+  margin: 0 20px;
+}
+.start {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.start h3 {
+  font-size: 30px;
+}
+.start div {
+  margin: 100px 0;
+  padding: 0 100px;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  background-color: rgba(248, 246, 250, 1);
+}
+.start nav {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  border-radius: 30px;
+  background-color: #333;
+  color: white;
+  transform: translateY(-30px);
+}
+.start nav p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin: 10px 0;
+}
+.start nav b {
+  color: rgb(248, 169, 17);
+  padding: 5px;
+}
+.start figure {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.start figure img {
+  width: 75%;
+  height: calc(100% + 50px);
+}
+.start a {
+  background: inherit;
+  border: none;
+  margin: 30px 0;
+  height: 40px;
+  width: fit-content;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(248, 169, 17);
+}
+.start a img {
+  margin: 0 10px;
+  height: 18px;
+}
+.training {
+  padding: 40px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.training h3 {
+  font-size: 30px;
+}
+.training div:first-of-type {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  width: 100%;
+  margin: 50px 0;
+}
+.training div:first-of-type nav {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  margin-right: -50px;
+  height: 75%;
+  border-radius: 30px;
+  box-shadow: 0 0 30px 0 rgba(189, 182, 182, 0.2);
+  z-index: 22;
+  background-color: white;
+}
+.training div:first-of-type p,
+.training div:first-of-type b {
+  font-size: 20px;
+  margin: 20px 0;
+  line-height: 1.7;
+}
+.training div:first-of-type b {
+  color: rgb(248, 169, 17);
+}
+.training div:first-of-type figure {
+  width: 100%;
+  height: auto;
+}
+.training div:first-of-type figure img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.training div:last-of-type {
+  margin: 30px 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  justify-content: space-between;
+}
+.training div:last-of-type nav {
+  display: flex;
+  flex-direction: column;
+}
+.training div:last-of-type > img {
+  width: 100%;
+  height: auto;
+}
+.training div:last-of-type h4 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+.training div:last-of-type p {
+  line-height: 1.5;
+}
+.training div:last-of-type a {
+  background: inherit;
+  border: none;
+  margin: 30px 0;
+  height: 40px;
+  width: fit-content;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(248, 169, 17);
+}
+.training a img {
+  margin: 0 10px;
+  height: 18px;
+}
+.deals {
+  padding: 40px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.deals h3 {
+  font-size: 30px;
+}
+.deals > div {
+  margin: 30px 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 55% 45%;
+  justify-content: space-between;
+}
+.deals div figure {
+  width: 100%;
+  height: auto;
+}
+.deals figure img {
+  width: 100%;
+  height: auto;
+}
+.deals > div > nav {
+  transform: translateX(-50%);
+  border-radius: 20px;
+  height: fit-content;
+  width: 100%;
+  padding: 30px;
+  margin-top: auto;
+  background-color: white;
+  box-shadow: 0 0 40px 0 rgba(189, 182, 182, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.deals nav h4 {
+  font-size: 20px;
+  margin: 10px 0;
+  color: rgb(248, 169, 17);
+}
+.deals nav p {
+  line-height: 1.6;
+  font-size: 16px;
+  margin: 10px 0;
+}
+.dealNav {
+  display: flex;
+  justify-content: space-between;
+}
+.dealNav nav {
+  display: flex;
+  align-items: center;
+}
+.dealNav nav button {
+  border: none;
+  background: inherit;
+  margin: 5px;
+}
+.dealNav nav button:first-of-type {
+  margin-right: 20px;
+}
+.dealNav nav button:last-of-type {
+  margin-left: 20px;
+}
+.dealNav a {
+  background: inherit;
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 10px;
+  height: 40px;
+  width: fit-content;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(248, 169, 17);
+}
+.dealNav a img {
+  margin: 0 10px;
+  height: 18px;
+}
+.case {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.case h3 {
+  font-size: 30px;
+}
+.case div {
+  padding: 40px 100px;
+  margin: 40px 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 350px 350px 350px;
+  justify-content: space-between;
+  background-color: rgba(189, 182, 182, 0.2);
+}
+.case div nav {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 35px;
+  box-shadow: 0 0 30px 0 rgba(189, 182, 182, 0.2);
+}
+.case div > img {
+  width: 100%;
+  height: auto;
+}
+.case div h4 {
+  font-size: 20px;
+  padding: 15px;
+}
+.case div p {
+  padding: 15px;
+  line-height: 1.5;
+}
+.case div a {
+  background: inherit;
+  border: none;
+  margin: 0 15px 20px;
+  height: 40px;
+  width: fit-content;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(248, 169, 17);
+}
+.case div a img {
+  margin: 0 10px;
+  height: 18px;
+}
+.case > nav {
+  display: flex;
+  align-items: center;
+}
+.case > nav button {
+  width: fit-content;
+  height: 40px;
+  background: inherit;
+  border: none;
+  margin: 5px;
+}
+.case button:first-of-type,
+.case button:last-of-type {
+  margin: 0 20px;
+}
+.case > a {
+  background: inherit;
+  border: none;
+  border-radius: 10px;
+  border: 1px solid;
+  height: 40px;
+  padding: 10px;
+  margin: 50px 0;
+  width: fit-content;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(248, 169, 17);
+}
+.case a img {
+  margin: 0 10px;
+  height: 18px;
+}
+.testimony {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.testimony h3 {
+  font-size: 30px;
+}
+.testimony > div {
+  padding: 40px 100px;
+  margin: 40px 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-content: space-between;
+  background-color: rgba(189, 182, 182, 0.2);
+}
+.testimony > div > nav:first-of-type {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.testimony div > nav:first-of-type p {
+  color: rgb(248, 169, 17);
+  font-size: 23px;
+  margin: 10px 0;
+}
+.testimony > div > nav:last-of-type {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
+.testimony div > nav:last-of-type blockquote {
+  line-height: 1.7;
+  margin: 10px auto;
+  font-size: 23px;
+  opacity: 0.8;
+}
+.testimony div > nav:last-of-type p {
+  font-size: 16px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  line-height: 1.7;
+}
+.testimony div > nav:last-of-type p img {
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+}
+.testimony div > nav:last-of-type nav {
+  display: flex;
+  align-items: center;
+}
+.testimony div > nav:last-of-type button {
+  border: none;
+  background: inherit;
+  margin: 5px;
+}
+.testimony div > nav:last-of-type button:first-of-type {
+  margin-right: 20px;
+}
+.testimony div > nav:last-of-type button:last-of-type {
+  margin-left: 20px;
+}
+.quote {
+  height: 30px;
+  width: 30px;
+  display: inline;
+}
+.jpart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0;
+  padding: 0 100px;
+}
+.jpart div:first-of-type {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.jpart div:first-of-type span {
+  height: 1px;
+  width: 100%;
+  background: black;
+}
+.jpart div:first-of-type img {
+  height: auto;
+  width: auto;
+  margin: 0 30px;
+}
+.jpart div:last-of-type {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  align-items: center;
+  margin: 10px 0;
+  padding-bottom: 20px;
+  max-width: 100vw;
+  overflow: hidden;
+  width: 100%;
+  border-bottom: 1px solid black;
+}
+.jpart div:last-of-type img {
+  margin: 0 10px;
+}
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.subscribe h2 {
+  color: rgb(49, 52, 53);
+  font-size: 23px;
+  padding: 10px 0;
+  border-bottom: 3px solid;
+}
+.subscribe p {
+  width: 40%;
+  margin-top: 30px;
+  text-align: center;
+  line-height: 1.6;
+  opacity: 0.6;
+}
+.subscribe label {
+  margin: 50px 0;
+  height: 50px;
+  width: 35%;
+  display: flex;
+}
+.subscribe input {
+  width: 75%;
+  height: 50px;
+  background: rgb(238, 239, 247);
+  border-radius: 10px 0 0 10px;
+  border: none;
+  padding: 0 20px;
+  font-size: 16px;
+}
+.subscribe button {
+  background: rgba(248, 169, 17, 1);
+  color: white;
+  border-radius: 0 10px 10px 0;
+  border: none;
+  width: 25%;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (max-width: 850px) {
+  .jpart {
+    margin: 20px 0;
+    padding: 15px;
+  }
+  .jpart div:first-of-type {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .jpart div:last-of-type {
+    padding-bottom: 30px;
+    overflow-x: scroll;
+  }
+  .jpart div:first-of-type img {
+    margin: 0 10px;
+  }
+  .jpart div:last-of-type {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    padding-bottom: 10px;
+    overflow: scroll;
+    width: 100%;
+    border-bottom: 1px solid black;
+  }
+  .jpart div:last-of-type img {
+    margin: 0 10px;
+  }
+  .subscribe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+  .subscribe h2 {
+    font-size: 18px;
+    padding: 10px 0;
+    border-bottom: 2px solid;
+    width: 60%;
+    line-height: 1.5;
+    text-align: center;
+  }
+  .subscribe p {
+    width: 100%;
+  }
+  .subscribe label {
+    width: 100%;
+  }
+  .subscribe input {
+    width: 100%;
+    font-size: 14px;
+  }
+  .subscribe button {
+    width: fit-content;
+    padding: 0 10px;
+    font-size: 14px;
+  }
+}
