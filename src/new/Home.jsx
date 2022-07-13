@@ -1329,6 +1329,7 @@ export default function Home() {
                   access to their vast network of professionals and contractors
                   that helped our market research with useful information that
                   helped us launch and attract new customers almost immediately.
+                  We had access to their vast network of
                   <img src={quote2} className={style.quote} alt="" />
                 </blockquote>
                 <p>
@@ -1344,7 +1345,8 @@ export default function Home() {
                   <img src={quote1} className={style.quote} alt="" /> Our fruit
                   bar was so functionally designed by Jefferson. We were worried
                   about how to make such a concept work but they were able to
-                  get it done and collaborate with us without stress
+                  get it done and collaborate with us without stress. Our fruit
+                  bar was so functionally designed by Jefferson.
                   <img src={quote2} className={style.quote} alt="" />
                 </blockquote>
                 <p>
@@ -1361,7 +1363,8 @@ export default function Home() {
                   building of our lounge would have gone sideways if we did not
                   have Jefferson Hospitality’s project management team to keep
                   our workers and contractors in line. We were able to complete
-                  our project in record time!
+                  our project in record time! We were able to complete our
+                  project in record time!
                   <img src={quote2} className={style.quote} alt="" />
                 </blockquote>
                 <p>
@@ -1378,7 +1381,8 @@ export default function Home() {
                   franchise needed expert advice on how to expand and Jefferson
                   gave us that advice plus the resources to do it. With the
                   advice on franchising and the network of professionals we had
-                  access to, expanding was easy.
+                  access to, expanding was easy. we had access to, expanding was
+                  easy.
                   <img src={quote2} className={style.quote} alt="" />
                 </blockquote>
                 <p>
@@ -1394,7 +1398,8 @@ export default function Home() {
                   <img src={quote1} className={style.quote} alt="" /> Our plaza
                   needed a facelift and we got just that with the sophisticated
                   designs to our plaza. It definitely attracted much attention
-                  from passersby.
+                  from passersby.Our plaza needed a facelift and we got just
+                  that with the sophisticated designs to our plaza.
                   <img src={quote2} className={style.quote} alt="" />
                 </blockquote>
                 <p>
