@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "./../styles/newhome.module.css";
 import Footer from "./Footer";
 import Header from "./Header";
@@ -37,8 +37,8 @@ import deal from "./../assets/deals.png";
 import study1 from "./../assets/redson1.jpg";
 import study2 from "./../assets/rebar1.png";
 import study3 from "./../assets/playground1.jpg";
-import study4 from "./../assets/heaven1.jpg";
-import test from './../assets/test.png'
+import study4 from "./../assets/newhero2.jpg";
+import testi from "./../assets/test.png";
 import j1 from "./../assets/dezeen-magazine-logo-vector.png";
 import j2 from "./../assets/space-logo.png";
 import heineken from "./../assets/Heineken-Logo.png";
@@ -47,33 +47,343 @@ import j5 from "./../assets/ukh.png";
 import j6 from "./../assets/hen.png";
 import j11 from "./../assets/jp 1.png";
 import j12 from "./../assets/images (7).png";
-import quote1 from './../assets/quote1.png'
-import quote2 from './../assets/quote2.png'
+import quote1 from "./../assets/quote1.png";
+import quote2 from "./../assets/quote2.png";
+import herobg1 from "./../assets/newhero1.png";
+import herobg2 from "./../assets/newhero2.jpg";
+import herobg3 from "./../assets/newhero3.jpg";
+import herobg4 from "./../assets/newhero4.png";
+import herobg5 from "./../assets/newhero5.jpg";
+
 export default function Home() {
+  const [trans, setTrans] = useState(0);
+  const [invest, setInvest] = useState(0);
+  const [study, setStudy] = useState(0);
+  const [test, setTest] = useState(0)
+  const [bg, setbg] = useState(herobg1);
+  function heroOne() {
+    setTrans(0);
+    setbg(herobg1);
+  }
+  function heroTwo() {
+    setTrans(-100);
+    setbg(herobg2);
+  }
+  function heroThree() {
+    setTrans(-200);
+    setbg(herobg3);
+  }
+  function heroFour() {
+    setTrans(-300);
+    setbg(herobg4);
+  }
+  function heroFive() {
+    setTrans(-400);
+    setbg(herobg5);
+  }
+  let hero_change = {
+    transform: "translateX(" + trans + "% )",
+  };
+
+  function investOne() {
+    setInvest(0);
+  }
+  function investTwo() {
+    setInvest(-100);
+  }
+  function investThree() {
+    setInvest(-200);
+  }
+  function investFour() {
+    setInvest(-300);
+  }
+  function investFive() {
+    setInvest(-400);
+  }
+  function investSix() {
+    setInvest(-500);
+  }
+  function investNext() {
+    if (invest === 0) {
+      setInvest(-100);
+    }
+    if (invest === -100) {
+      setInvest(-200);
+    }
+    if (invest === -200) {
+      setInvest(-300);
+    }
+    if (invest === -300) {
+      setInvest(-400);
+    }
+    if (invest === -400) {
+      setInvest(-500);
+    }
+    if (invest === -500) {
+      return;
+    }
+  }
+  function investPrev() {
+    if (invest === -500) {
+      setInvest(-400);
+    }
+    if (invest === -400) {
+      setInvest(-300);
+    }
+    if (invest === -300) {
+      setInvest(-200);
+    }
+    if (invest === -200) {
+      setInvest(-100);
+    }
+    if (invest === -100) {
+      setInvest(0);
+    }
+    if (invest === 0) {
+      return;
+    }
+  }
+  let invest_style = {
+    transform: "translateX(" + invest + "% )",
+  };
+
+  function studyOne() {
+    setStudy(0);
+  }
+  function studyTwo() {
+    setStudy(-100);
+  }
+  function studyThree() {
+    setStudy(-200);
+  }
+  function studyFour() {
+    setStudy(-300);
+  }
+  function studyFive() {
+    setStudy(-400);
+  }
+  function studySix() {
+    setStudy(-500);
+  }
+  function studyNext() {
+    if (study === 0) {
+      setStudy(-100);
+    }
+    if (study === -100) {
+      setStudy(-200);
+    }
+    if (study === -200) {
+      setStudy(-300);
+    }
+    if (study === -300) {
+      setStudy(-400);
+    }
+    if (study === -400) {
+      setStudy(-500);
+    }
+    if (study === -500) {
+      return;
+    }
+  }
+  function studyPrev() {
+    if (study === -500) {
+      setStudy(-400);
+    }
+    if (study === -400) {
+      setStudy(-300);
+    }
+    if (study === -300) {
+      setStudy(-200);
+    }
+    if (study === -200) {
+      setStudy(-100);
+    }
+    if (study === -100) {
+      setStudy(0);
+    }
+    if (study === 0) {
+      return;
+    }
+  }
+  let study_style = {
+    transform: "translateX(" + study + "% )",
+  };
+
+  function testOne() {
+    setTest(0);
+  }
+  function testTwo() {
+    setTest(-100);
+  }
+  function testThree() {
+    setTest(-200);
+  }
+  function testFour() {
+    setTest(-300);
+  }
+  function testFive() {
+    setTest(-400);
+  }
+  function testSix() {
+    setTest(-500);
+  }
+  function testNext() {
+    if (test === 0) {
+      setTest(-100);
+    }
+    if (test === -100) {
+      setTest(-200);
+    }
+    if (test === -200) {
+      setTest(-300);
+    }
+    if (test === -300) {
+      setTest(-400);
+    }
+    if (test === -400) {
+      setTest(-500);
+    }
+    if (test === -500) {
+      return;
+    }
+  }
+  function testPrev() {
+    if (test === -500) {
+      setTest(-400);
+    }
+    if (test === -400) {
+      setTest(-300);
+    }
+    if (test === -300) {
+      setTest(-200);
+    }
+    if (test === -200) {
+      setTest(-100);
+    }
+    if (test === -100) {
+      setTest(0);
+    }
+    if (test === 0) {
+      return;
+    }
+  }
+  let test_style = {
+    transform: "translateX(" + test + "% )",
+  };
   return (
     <div>
       <Header />
-      <section className={style.hero}>
-        <h1>
-          We build successful <br /> <b>Hospitality</b> businesses
-        </h1>
-        <p>
-          Build your hospitality business with us and achieve <br /> excellence
-          in a shorter time.
-        </p>
-        <nav>
-          <button className={style.hero_btn}>Request Consultation</button>
-          <button className={style.hero_vid}>
-            <img src={vid} alt="" /> Watch Video
-          </button>
-        </nav>
-        <nav>
-          <img src={hero1} alt="" />
-          <img src={hero2} alt="" />
-          <img src={hero2} alt="" />
-          <img src={hero2} alt="" />
-          <img src={hero2} alt="" />
-        </nav>
+      <section className={style.hero} style={{ backgroundImage: `url(${bg})` }}>
+        <div className={style.heroDiv} style={hero_change}>
+          <h1>
+            We build successful <br /> <b>Hospitality</b> businesses
+          </h1>
+          <p>
+            Build your hospitality business with us and achieve <br />{" "}
+            excellence in a shorter time.
+          </p>
+          <nav>
+            <button className={style.hero_btn}>Request Consultation</button>
+            <button className={style.hero_vid}>
+              <img src={vid} alt="" /> Watch Video
+            </button>
+          </nav>
+          <nav>
+            <img src={hero1} alt="" onClick={heroOne} />
+            <img src={hero2} alt="" onClick={heroTwo} />
+            <img src={hero2} alt="" onClick={heroThree} />
+            <img src={hero2} alt="" onClick={heroFour} />
+            <img src={hero2} alt="" onClick={heroFive} />
+          </nav>
+        </div>
+        <div className={style.heroDiv} style={hero_change}>
+          <h1>
+            We build successful <br /> <b>Hospitality</b> businesses
+          </h1>
+          <p>
+            Build your hospitality business with us and achieve <br />{" "}
+            excellence in a shorter time.
+          </p>
+          <nav>
+            <button className={style.hero_btn}>Request Consultation</button>
+            <button className={style.hero_vid}>
+              <img src={vid} alt="" /> Watch Video
+            </button>
+          </nav>
+          <nav>
+            <img src={hero2} alt="" onClick={heroOne} />
+            <img src={hero1} alt="" onClick={heroTwo} />
+            <img src={hero2} alt="" onClick={heroThree} />
+            <img src={hero2} alt="" onClick={heroFour} />
+            <img src={hero2} alt="" onClick={heroFive} />
+          </nav>
+        </div>
+        <div className={style.heroDiv} style={hero_change}>
+          <h1>
+            We build successful <br /> <b>Hospitality</b> businesses
+          </h1>
+          <p>
+            Build your hospitality business with us and achieve <br />{" "}
+            excellence in a shorter time.
+          </p>
+          <nav>
+            <button className={style.hero_btn}>Request Consultation</button>
+            <button className={style.hero_vid}>
+              <img src={vid} alt="" /> Watch Video
+            </button>
+          </nav>
+          <nav>
+            <img src={hero2} alt="" onClick={heroOne} />
+            <img src={hero2} alt="" onClick={heroTwo} />
+            <img src={hero1} alt="" onClick={heroThree} />
+            <img src={hero2} alt="" onClick={heroFour} />
+            <img src={hero2} alt="" onClick={heroFive} />
+          </nav>
+        </div>
+        <div className={style.heroDiv} style={hero_change}>
+          <h1>
+            We build successful <br /> <b>Hospitality</b> businesses
+          </h1>
+          <p>
+            Build your hospitality business with us and achieve <br />{" "}
+            excellence in a shorter time.
+          </p>
+          <nav>
+            <button className={style.hero_btn}>Request Consultation</button>
+            <button className={style.hero_vid}>
+              <img src={vid} alt="" /> Watch Video
+            </button>
+          </nav>
+          <nav>
+            <img src={hero2} alt="" onClick={heroOne} />
+            <img src={hero2} alt="" onClick={heroTwo} />
+            <img src={hero2} alt="" onClick={heroThree} />
+            <img src={hero1} alt="" onClick={heroFour} />
+            <img src={hero2} alt="" onClick={heroFive} />
+          </nav>
+        </div>
+        <div className={style.heroDiv} style={hero_change}>
+          <h1>
+            We build successful <br /> <b>Hospitality</b> businesses
+          </h1>
+          <p>
+            Build your hospitality business with us and achieve <br />{" "}
+            excellence in a shorter time.
+          </p>
+          <nav>
+            <button className={style.hero_btn}>Request Consultation</button>
+            <button className={style.hero_vid}>
+              <img src={vid} alt="" /> Watch Video
+            </button>
+          </nav>
+          <nav>
+            <img src={hero2} alt="" onClick={heroOne} />
+            <img src={hero2} alt="" onClick={heroTwo} />
+            <img src={hero2} alt="" onClick={heroThree} />
+            <img src={hero2} alt="" onClick={heroFour} />
+            <img src={hero1} alt="" onClick={heroFive} />
+          </nav>
+        </div>
       </section>
       <section className={style.partners}>
         <small>Over 100+ businesses growing with Jefferson Hospitality</small>
@@ -98,7 +408,7 @@ export default function Home() {
                 <b>10+</b> <br /> Years of Experience
               </span>
               <span>
-                <b>NO 1</b> <br /> Hospitality company
+                <b>№ 1</b> <br /> Hospitality company
               </span>
               <span>
                 <b>100+</b> <br /> Happy Customers
@@ -217,80 +527,352 @@ export default function Home() {
       </section>
       <section className={style.invest}>
         <h3>Invest in hospitality</h3>
-        <div>
-          <nav>
-            <img src={invest1} alt="" />
-            <h4>Hotels and Resort</h4>
-            <p>
-              Weaponize your assets to attract a new set of patrons with
-              attractive, cutting-edge redesigns and redecorations guaranteed to
-              rejuvenate your asset to life.
-            </p>
-            <Link to="/">
-              Read More <img src={exp} alt="" />{" "}
-            </Link>
-          </nav>
-          <nav>
-            <img src={invest2} alt="" />
-            <h4>Event Centers</h4>
-            <p>
-              Weaponize your assets to attract a new set of patrons with
-              attractive, cutting-edge redesigns and redecorations guaranteed to
-              rejuvenate your asset to life.
-            </p>
-            <Link to="/">
-              Read More <img src={exp} alt="" />{" "}
-            </Link>
-          </nav>
-          <nav>
-            <img src={invest3} alt="" />
-            <h4>Cruise Line</h4>
-            <p>
-              Weaponize your assets to attract a new set of patrons with
-              attractive, cutting-edge redesigns and redecorations guaranteed to
-              rejuvenate your asset to life.
-            </p>
-            <Link to="/">
-              Read More <img src={exp} alt="" />{" "}
-            </Link>
-          </nav>
-          <nav>
-            <img src={invest1} alt="" />
-            <h4>Health, Wellness and Spa</h4>
-            <p>
-              Weaponize your assets to attract a new set of patrons with
-              attractive, cutting-edge redesigns and redecorations guaranteed to
-              rejuvenate your asset to life.
-            </p>
-            <Link to="/">
-              Read More <img src={exp} alt="" />{" "}
-            </Link>
-          </nav>
-        </div>
+        <section>
+          <div className={style.investDiv} style={invest_style}>
+            <nav>
+              <img src={invest1} alt="" />
+              <h4>Hotels and Resort</h4>
+              <p>
+                Weaponize your assets to attract a new set of patrons with
+                attractive, cutting-edge redesigns and redecorations guaranteed
+                to rejuvenate your asset to life.
+              </p>
+              <Link to="/">
+                Read More <img src={exp} alt="" />{" "}
+              </Link>
+            </nav>
+            <nav>
+              <img src={invest2} alt="" />
+              <h4>Event Centers</h4>
+              <p>
+                Weaponize your assets to attract a new set of patrons with
+                attractive, cutting-edge redesigns and redecorations guaranteed
+                to rejuvenate your asset to life.
+              </p>
+              <Link to="/">
+                Read More <img src={exp} alt="" />{" "}
+              </Link>
+            </nav>
+            <nav>
+              <img src={invest3} alt="" />
+              <h4>Cruise Line</h4>
+              <p>
+                Weaponize your assets to attract a new set of patrons with
+                attractive, cutting-edge redesigns and redecorations guaranteed
+                to rejuvenate your asset to life.
+              </p>
+              <Link to="/">
+                Read More <img src={exp} alt="" />{" "}
+              </Link>
+            </nav>
+            <nav>
+              <img src={invest1} alt="" />
+              <h4>Health, Wellness and Spa</h4>
+              <p>
+                Weaponize your assets to attract a new set of patrons with
+                attractive, cutting-edge redesigns and redecorations guaranteed
+                to rejuvenate your asset to life.
+              </p>
+              <Link to="/">
+                Read More <img src={exp} alt="" />{" "}
+              </Link>
+            </nav>
+          </div>
+          <div className={style.investDiv} style={invest_style}>
+            <nav>
+              <img src={invest1} alt="" />
+              <h4>Hotels and Resort</h4>
+              <p>
+                Weaponize your assets to attract a new set of patrons with
+                attractive, cutting-edge redesigns and redecorations guaranteed
+                to rejuvenate your asset to life.
+              </p>
+              <Link to="/">
+                Read More <img src={exp} alt="" />{" "}
+              </Link>
+            </nav>
+            <nav>
+              <img src={invest2} alt="" />
+              <h4>Event Centers</h4>
+              <p>
+                Weaponize your assets to attract a new set of patrons with
+                attractive, cutting-edge redesigns and redecorations guaranteed
+                to rejuvenate your asset to life.
+              </p>
+              <Link to="/">
+                Read More <img src={exp} alt="" />{" "}
+              </Link>
+            </nav>
+            <nav>
+              <img src={invest3} alt="" />
+              <h4>Cruise Line</h4>
+              <p>
+                Weaponize your assets to attract a new set of patrons with
+                attractive, cutting-edge redesigns and redecorations guaranteed
+                to rejuvenate your asset to life.
+              </p>
+              <Link to="/">
+                Read More <img src={exp} alt="" />{" "}
+              </Link>
+            </nav>
+            <nav>
+              <img src={invest1} alt="" />
+              <h4>Health, Wellness and Spa</h4>
+              <p>
+                Weaponize your assets to attract a new set of patrons with
+                attractive, cutting-edge redesigns and redecorations guaranteed
+                to rejuvenate your asset to life.
+              </p>
+              <Link to="/">
+                Read More <img src={exp} alt="" />{" "}
+              </Link>
+            </nav>
+          </div>
+          <div className={style.investDiv} style={invest_style}>
+            <nav>
+              <img src={invest1} alt="" />
+              <h4>Hotels and Resort</h4>
+              <p>
+                Weaponize your assets to attract a new set of patrons with
+                attractive, cutting-edge redesigns and redecorations guaranteed
+                to rejuvenate your asset to life.
+              </p>
+              <Link to="/">
+                Read More <img src={exp} alt="" />{" "}
+              </Link>
+            </nav>
+            <nav>
+              <img src={invest2} alt="" />
+              <h4>Event Centers</h4>
+              <p>
+                Weaponize your assets to attract a new set of patrons with
+                attractive, cutting-edge redesigns and redecorations guaranteed
+                to rejuvenate your asset to life.
+              </p>
+              <Link to="/">
+                Read More <img src={exp} alt="" />{" "}
+              </Link>
+            </nav>
+            <nav>
+              <img src={invest3} alt="" />
+              <h4>Cruise Line</h4>
+              <p>
+                Weaponize your assets to attract a new set of patrons with
+                attractive, cutting-edge redesigns and redecorations guaranteed
+                to rejuvenate your asset to life.
+              </p>
+              <Link to="/">
+                Read More <img src={exp} alt="" />{" "}
+              </Link>
+            </nav>
+            <nav>
+              <img src={invest1} alt="" />
+              <h4>Health, Wellness and Spa</h4>
+              <p>
+                Weaponize your assets to attract a new set of patrons with
+                attractive, cutting-edge redesigns and redecorations guaranteed
+                to rejuvenate your asset to life.
+              </p>
+              <Link to="/">
+                Read More <img src={exp} alt="" />{" "}
+              </Link>
+            </nav>
+          </div>
+          <div className={style.investDiv} style={invest_style}>
+            <nav>
+              <img src={invest1} alt="" />
+              <h4>Hotels and Resort</h4>
+              <p>
+                Weaponize your assets to attract a new set of patrons with
+                attractive, cutting-edge redesigns and redecorations guaranteed
+                to rejuvenate your asset to life.
+              </p>
+              <Link to="/">
+                Read More <img src={exp} alt="" />{" "}
+              </Link>
+            </nav>
+            <nav>
+              <img src={invest2} alt="" />
+              <h4>Event Centers</h4>
+              <p>
+                Weaponize your assets to attract a new set of patrons with
+                attractive, cutting-edge redesigns and redecorations guaranteed
+                to rejuvenate your asset to life.
+              </p>
+              <Link to="/">
+                Read More <img src={exp} alt="" />{" "}
+              </Link>
+            </nav>
+            <nav>
+              <img src={invest3} alt="" />
+              <h4>Cruise Line</h4>
+              <p>
+                Weaponize your assets to attract a new set of patrons with
+                attractive, cutting-edge redesigns and redecorations guaranteed
+                to rejuvenate your asset to life.
+              </p>
+              <Link to="/">
+                Read More <img src={exp} alt="" />{" "}
+              </Link>
+            </nav>
+            <nav>
+              <img src={invest1} alt="" />
+              <h4>Health, Wellness and Spa</h4>
+              <p>
+                Weaponize your assets to attract a new set of patrons with
+                attractive, cutting-edge redesigns and redecorations guaranteed
+                to rejuvenate your asset to life.
+              </p>
+              <Link to="/">
+                Read More <img src={exp} alt="" />{" "}
+              </Link>
+            </nav>
+          </div>
+          <div className={style.investDiv} style={invest_style}>
+            <nav>
+              <img src={invest1} alt="" />
+              <h4>Hotels and Resort</h4>
+              <p>
+                Weaponize your assets to attract a new set of patrons with
+                attractive, cutting-edge redesigns and redecorations guaranteed
+                to rejuvenate your asset to life.
+              </p>
+              <Link to="/">
+                Read More <img src={exp} alt="" />{" "}
+              </Link>
+            </nav>
+            <nav>
+              <img src={invest2} alt="" />
+              <h4>Event Centers</h4>
+              <p>
+                Weaponize your assets to attract a new set of patrons with
+                attractive, cutting-edge redesigns and redecorations guaranteed
+                to rejuvenate your asset to life.
+              </p>
+              <Link to="/">
+                Read More <img src={exp} alt="" />{" "}
+              </Link>
+            </nav>
+            <nav>
+              <img src={invest3} alt="" />
+              <h4>Cruise Line</h4>
+              <p>
+                Weaponize your assets to attract a new set of patrons with
+                attractive, cutting-edge redesigns and redecorations guaranteed
+                to rejuvenate your asset to life.
+              </p>
+              <Link to="/">
+                Read More <img src={exp} alt="" />{" "}
+              </Link>
+            </nav>
+            <nav>
+              <img src={invest1} alt="" />
+              <h4>Health, Wellness and Spa</h4>
+              <p>
+                Weaponize your assets to attract a new set of patrons with
+                attractive, cutting-edge redesigns and redecorations guaranteed
+                to rejuvenate your asset to life.
+              </p>
+              <Link to="/">
+                Read More <img src={exp} alt="" />{" "}
+              </Link>
+            </nav>
+          </div>
+          <div className={style.investDiv} style={invest_style}>
+            <nav>
+              <img src={invest1} alt="" />
+              <h4>Hotels and Resort</h4>
+              <p>
+                Weaponize your assets to attract a new set of patrons with
+                attractive, cutting-edge redesigns and redecorations guaranteed
+                to rejuvenate your asset to life.
+              </p>
+              <Link to="/">
+                Read More <img src={exp} alt="" />{" "}
+              </Link>
+            </nav>
+            <nav>
+              <img src={invest2} alt="" />
+              <h4>Event Centers</h4>
+              <p>
+                Weaponize your assets to attract a new set of patrons with
+                attractive, cutting-edge redesigns and redecorations guaranteed
+                to rejuvenate your asset to life.
+              </p>
+              <Link to="/">
+                Read More <img src={exp} alt="" />{" "}
+              </Link>
+            </nav>
+            <nav>
+              <img src={invest3} alt="" />
+              <h4>Cruise Line</h4>
+              <p>
+                Weaponize your assets to attract a new set of patrons with
+                attractive, cutting-edge redesigns and redecorations guaranteed
+                to rejuvenate your asset to life.
+              </p>
+              <Link to="/">
+                Read More <img src={exp} alt="" />{" "}
+              </Link>
+            </nav>
+            <nav>
+              <img src={invest1} alt="" />
+              <h4>Health, Wellness and Spa</h4>
+              <p>
+                Weaponize your assets to attract a new set of patrons with
+                attractive, cutting-edge redesigns and redecorations guaranteed
+                to rejuvenate your asset to life.
+              </p>
+              <Link to="/">
+                Read More <img src={exp} alt="" />{" "}
+              </Link>
+            </nav>
+          </div>
+        </section>
         <nav>
           <button>
-            <img src={left} alt="" />
+            <img src={left} alt="" onClick={investPrev} />
           </button>
           <button>
-            <img src={dot1} alt="" />
+            <img src={invest === 0 ? dot1 : dot2} alt="" onClick={investOne} />
           </button>
           <button>
-            <img src={dot2} alt="" />
+            <img
+              src={invest === -100 ? dot1 : dot2}
+              alt=""
+              onClick={investTwo}
+            />
           </button>
           <button>
-            <img src={dot2} alt="" />
+            <img
+              src={invest === -200 ? dot1 : dot2}
+              alt=""
+              onClick={investThree}
+            />
           </button>
           <button>
-            <img src={dot2} alt="" />
+            <img
+              src={invest === -300 ? dot1 : dot2}
+              alt=""
+              onClick={investFour}
+            />
           </button>
           <button>
-            <img src={dot2} alt="" />
+            <img
+              src={invest === -400 ? dot1 : dot2}
+              alt=""
+              onClick={investFive}
+            />
           </button>
           <button>
-            <img src={dot2} alt="" />
+            <img
+              src={invest === -500 ? dot1 : dot2}
+              alt=""
+              onClick={investSix}
+            />
           </button>
           <button>
-            <img src={right} alt="" />
+            <img src={right} alt="" onClick={investNext} />
           </button>
         </nav>
       </section>
@@ -424,76 +1006,320 @@ export default function Home() {
       </section>
       <section className={style.case}>
         <h3>Case Study</h3>
-        <div>
-          <nav>
-            <img src={study1} alt="" />
-            <h4>Redson Lounge</h4>
-            <p>
-              The Redson Lounge is a sports themed bar and betting centre with
-              gaming ports and social centres
-            </p>
-            <Link to="/">
-              Read More <img src={exp} alt="" />{" "}
-            </Link>
-          </nav>
-          <nav>
-            <img src={study2} alt="" />
-            <h4>Rebar</h4>
-            <p>
-              Rebar is a restaurant and nightclub that provides outdoor
-              relaxation with indoor gaming experience
-            </p>
-            <Link to="/">
-              Read More <img src={exp} alt="" />{" "}
-            </Link>
-          </nav>
-          <nav>
-            <img src={study3} alt="" />
-            <h4>The Playground</h4>
-            <p>
-              The Playground is a classy relaxation centre with a rich dining
-              experience and beach club relaxation centre
-            </p>
-            <Link to="/">
-              Read More <img src={exp} alt="" />{" "}
-            </Link>
-          </nav>
-          <nav>
-            <img src={study4} alt="" />
-            <h4>Heavens Bar</h4>
-            <p>
-              Heavens is a bar and lounge experience for nightlifers in Abuja.
-              It offers exotic drink and high-quality VIP service.
-            </p>
-            <Link to="/">
-              Read More <img src={exp} alt="" />{" "}
-            </Link>
-          </nav>
-        </div>
+        <section>
+          <div style={study_style}>
+            <nav>
+              <img src={study1} alt="" />
+              <h4>Redson Lounge</h4>
+              <p>
+                The Redson Lounge is a sports themed bar and betting centre with
+                gaming ports and social centres
+              </p>
+              <Link to="/">
+                Read More <img src={exp} alt="" />{" "}
+              </Link>
+            </nav>
+            <nav>
+              <img src={study2} alt="" />
+              <h4>Rebar</h4>
+              <p>
+                Rebar is a restaurant and nightclub that provides outdoor
+                relaxation with indoor gaming experience
+              </p>
+              <Link to="/">
+                Read More <img src={exp} alt="" />{" "}
+              </Link>
+            </nav>
+            <nav>
+              <img src={study3} alt="" />
+              <h4>The Playground</h4>
+              <p>
+                The Playground is a classy relaxation centre with a rich dining
+                experience and beach club relaxation centre
+              </p>
+              <Link to="/">
+                Read More <img src={exp} alt="" />{" "}
+              </Link>
+            </nav>
+            <nav>
+              <img src={study4} alt="" />
+              <h4>Heavens Bar</h4>
+              <p>
+                Heavens is a bar and lounge experience for nightlifers in Abuja.
+                It offers exotic drink and high-quality VIP service.
+              </p>
+              <Link to="/">
+                Read More <img src={exp} alt="" />{" "}
+              </Link>
+            </nav>
+          </div>
+          <div style={study_style}>
+            <nav>
+              <img src={study1} alt="" />
+              <h4>Redson Lounge</h4>
+              <p>
+                The Redson Lounge is a sports themed bar and betting centre with
+                gaming ports and social centres
+              </p>
+              <Link to="/">
+                Read More <img src={exp} alt="" />{" "}
+              </Link>
+            </nav>
+            <nav>
+              <img src={study2} alt="" />
+              <h4>Rebar</h4>
+              <p>
+                Rebar is a restaurant and nightclub that provides outdoor
+                relaxation with indoor gaming experience
+              </p>
+              <Link to="/">
+                Read More <img src={exp} alt="" />{" "}
+              </Link>
+            </nav>
+            <nav>
+              <img src={study3} alt="" />
+              <h4>The Playground</h4>
+              <p>
+                The Playground is a classy relaxation centre with a rich dining
+                experience and beach club relaxation centre
+              </p>
+              <Link to="/">
+                Read More <img src={exp} alt="" />{" "}
+              </Link>
+            </nav>
+            <nav>
+              <img src={study4} alt="" />
+              <h4>Heavens Bar</h4>
+              <p>
+                Heavens is a bar and lounge experience for nightlifers in Abuja.
+                It offers exotic drink and high-quality VIP service.
+              </p>
+              <Link to="/">
+                Read More <img src={exp} alt="" />{" "}
+              </Link>
+            </nav>
+          </div>
+          <div style={study_style}>
+            <nav>
+              <img src={study1} alt="" />
+              <h4>Redson Lounge</h4>
+              <p>
+                The Redson Lounge is a sports themed bar and betting centre with
+                gaming ports and social centres
+              </p>
+              <Link to="/">
+                Read More <img src={exp} alt="" />{" "}
+              </Link>
+            </nav>
+            <nav>
+              <img src={study2} alt="" />
+              <h4>Rebar</h4>
+              <p>
+                Rebar is a restaurant and nightclub that provides outdoor
+                relaxation with indoor gaming experience
+              </p>
+              <Link to="/">
+                Read More <img src={exp} alt="" />{" "}
+              </Link>
+            </nav>
+            <nav>
+              <img src={study3} alt="" />
+              <h4>The Playground</h4>
+              <p>
+                The Playground is a classy relaxation centre with a rich dining
+                experience and beach club relaxation centre
+              </p>
+              <Link to="/">
+                Read More <img src={exp} alt="" />{" "}
+              </Link>
+            </nav>
+            <nav>
+              <img src={study4} alt="" />
+              <h4>Heavens Bar</h4>
+              <p>
+                Heavens is a bar and lounge experience for nightlifers in Abuja.
+                It offers exotic drink and high-quality VIP service.
+              </p>
+              <Link to="/">
+                Read More <img src={exp} alt="" />{" "}
+              </Link>
+            </nav>
+          </div>
+          <div style={study_style}>
+            <nav>
+              <img src={study1} alt="" />
+              <h4>Redson Lounge</h4>
+              <p>
+                The Redson Lounge is a sports themed bar and betting centre with
+                gaming ports and social centres
+              </p>
+              <Link to="/">
+                Read More <img src={exp} alt="" />{" "}
+              </Link>
+            </nav>
+            <nav>
+              <img src={study2} alt="" />
+              <h4>Rebar</h4>
+              <p>
+                Rebar is a restaurant and nightclub that provides outdoor
+                relaxation with indoor gaming experience
+              </p>
+              <Link to="/">
+                Read More <img src={exp} alt="" />{" "}
+              </Link>
+            </nav>
+            <nav>
+              <img src={study3} alt="" />
+              <h4>The Playground</h4>
+              <p>
+                The Playground is a classy relaxation centre with a rich dining
+                experience and beach club relaxation centre
+              </p>
+              <Link to="/">
+                Read More <img src={exp} alt="" />{" "}
+              </Link>
+            </nav>
+            <nav>
+              <img src={study4} alt="" />
+              <h4>Heavens Bar</h4>
+              <p>
+                Heavens is a bar and lounge experience for nightlifers in Abuja.
+                It offers exotic drink and high-quality VIP service.
+              </p>
+              <Link to="/">
+                Read More <img src={exp} alt="" />{" "}
+              </Link>
+            </nav>
+          </div>
+          <div style={study_style}>
+            <nav>
+              <img src={study1} alt="" />
+              <h4>Redson Lounge</h4>
+              <p>
+                The Redson Lounge is a sports themed bar and betting centre with
+                gaming ports and social centres
+              </p>
+              <Link to="/">
+                Read More <img src={exp} alt="" />{" "}
+              </Link>
+            </nav>
+            <nav>
+              <img src={study2} alt="" />
+              <h4>Rebar</h4>
+              <p>
+                Rebar is a restaurant and nightclub that provides outdoor
+                relaxation with indoor gaming experience
+              </p>
+              <Link to="/">
+                Read More <img src={exp} alt="" />{" "}
+              </Link>
+            </nav>
+            <nav>
+              <img src={study3} alt="" />
+              <h4>The Playground</h4>
+              <p>
+                The Playground is a classy relaxation centre with a rich dining
+                experience and beach club relaxation centre
+              </p>
+              <Link to="/">
+                Read More <img src={exp} alt="" />{" "}
+              </Link>
+            </nav>
+            <nav>
+              <img src={study4} alt="" />
+              <h4>Heavens Bar</h4>
+              <p>
+                Heavens is a bar and lounge experience for nightlifers in Abuja.
+                It offers exotic drink and high-quality VIP service.
+              </p>
+              <Link to="/">
+                Read More <img src={exp} alt="" />{" "}
+              </Link>
+            </nav>
+          </div>
+          <div style={study_style}>
+            <nav>
+              <img src={study1} alt="" />
+              <h4>Redson Lounge</h4>
+              <p>
+                The Redson Lounge is a sports themed bar and betting centre with
+                gaming ports and social centres
+              </p>
+              <Link to="/">
+                Read More <img src={exp} alt="" />{" "}
+              </Link>
+            </nav>
+            <nav>
+              <img src={study2} alt="" />
+              <h4>Rebar</h4>
+              <p>
+                Rebar is a restaurant and nightclub that provides outdoor
+                relaxation with indoor gaming experience
+              </p>
+              <Link to="/">
+                Read More <img src={exp} alt="" />{" "}
+              </Link>
+            </nav>
+            <nav>
+              <img src={study3} alt="" />
+              <h4>The Playground</h4>
+              <p>
+                The Playground is a classy relaxation centre with a rich dining
+                experience and beach club relaxation centre
+              </p>
+              <Link to="/">
+                Read More <img src={exp} alt="" />{" "}
+              </Link>
+            </nav>
+            <nav>
+              <img src={study4} alt="" />
+              <h4>Heavens Bar</h4>
+              <p>
+                Heavens is a bar and lounge experience for nightlifers in Abuja.
+                It offers exotic drink and high-quality VIP service.
+              </p>
+              <Link to="/">
+                Read More <img src={exp} alt="" />{" "}
+              </Link>
+            </nav>
+          </div>
+        </section>
         <nav>
           <button>
-            <img src={left} alt="" />
+            <img src={left} alt="" onClick={studyPrev} />
           </button>
           <button>
-            <img src={dot1} alt="" />
+            <img src={study === 0 ? dot1 : dot2} alt="" onClick={studyOne} />
           </button>
           <button>
-            <img src={dot2} alt="" />
+            <img src={study === -100 ? dot1 : dot2} alt="" onClick={studyTwo} />
           </button>
           <button>
-            <img src={dot2} alt="" />
+            <img
+              src={study === -200 ? dot1 : dot2}
+              alt=""
+              onClick={studyThree}
+            />
           </button>
           <button>
-            <img src={dot2} alt="" />
+            <img
+              src={study === -300 ? dot1 : dot2}
+              alt=""
+              onClick={studyFour}
+            />
           </button>
           <button>
-            <img src={dot2} alt="" />
+            <img
+              src={study === -400 ? dot1 : dot2}
+              alt=""
+              onClick={studyFive}
+            />
           </button>
           <button>
-            <img src={dot2} alt="" />
+            <img src={study === -500 ? dot1 : dot2} alt="" onClick={studySix} />
           </button>
           <button>
-            <img src={right} alt="" />
+            <img src={right} alt="" onClick={studyNext} />
           </button>
         </nav>
         <Link to="/">
@@ -508,48 +1334,150 @@ export default function Home() {
             <span>5 star rating</span>
           </nav>
           <nav>
-            <blockquote>
-              <img src={quote1} className={style.quote} alt="" /> Our plaza
-              needed a facelift and we <br /> got just that with the
-              sophisticated <br /> designs to our plaza. It definitely <br />{" "}
-              attracted much attention from passersby.{" "}
-              <img src={quote2} className={style.quote} alt="" />
-            </blockquote>
-            <div>
-              <p>
-                <img src={test} alt="" />
-                <span>
-                  Eagle Plaza <br />
-                  MR. Johnson Andrew
-                </span>
-              </p>
-              <nav>
-                <button>
-                  <img src={left} alt="" />
-                </button>
-                <button>
-                  <img src={dot1} alt="" />
-                </button>
-                <button>
-                  <img src={dot2} alt="" />
-                </button>
-                <button>
-                  <img src={dot2} alt="" />
-                </button>
-                <button>
-                  <img src={dot2} alt="" />
-                </button>
-                <button>
-                  <img src={dot2} alt="" />
-                </button>
-                <button>
-                  <img src={dot2} alt="" />
-                </button>
-                <button>
-                  <img src={right} alt="" />
-                </button>
-              </nav>
-            </div>
+            <section>
+              <div style={test_style}>
+                <blockquote>
+                  <img src={quote1} className={style.quote} alt="" /> Our plaza
+                  needed a facelift and we <br /> got just that with the
+                  sophisticated <br /> designs to our plaza. It definitely{" "}
+                  <br /> attracted much attention from passersby.{" "}
+                  <img src={quote2} className={style.quote} alt="" />
+                </blockquote>
+                <p>
+                  <img src={testi} alt="" />
+                  <span>
+                    Eagle Plaza <br />
+                    MR. Johnson Andrew
+                  </span>
+                </p>
+              </div>
+              <div style={test_style}>
+                <blockquote>
+                  <img src={quote1} className={style.quote} alt="" /> Our plaza
+                  needed a facelift and we <br /> got just that with the
+                  sophisticated <br /> designs to our plaza. It definitely{" "}
+                  <br /> attracted much attention from passersby.{" "}
+                  <img src={quote2} className={style.quote} alt="" />
+                </blockquote>
+                <p>
+                  <img src={testi} alt="" />
+                  <span>
+                    Eagle Plaza <br />
+                    MR. Johnson Andrew
+                  </span>
+                </p>
+              </div>
+              <div style={test_style}>
+                <blockquote>
+                  <img src={quote1} className={style.quote} alt="" /> Our plaza
+                  needed a facelift and we <br /> got just that with the
+                  sophisticated <br /> designs to our plaza. It definitely{" "}
+                  <br /> attracted much attention from passersby.{" "}
+                  <img src={quote2} className={style.quote} alt="" />
+                </blockquote>
+                <p>
+                  <img src={testi} alt="" />
+                  <span>
+                    Eagle Plaza <br />
+                    MR. Johnson Andrew
+                  </span>
+                </p>
+              </div>
+              <div style={test_style}>
+                <blockquote>
+                  <img src={quote1} className={style.quote} alt="" /> Our plaza
+                  needed a facelift and we <br /> got just that with the
+                  sophisticated <br /> designs to our plaza. It definitely{" "}
+                  <br /> attracted much attention from passersby.{" "}
+                  <img src={quote2} className={style.quote} alt="" />
+                </blockquote>
+                <p>
+                  <img src={testi} alt="" />
+                  <span>
+                    Eagle Plaza <br />
+                    MR. Johnson Andrew
+                  </span>
+                </p>
+              </div>
+              <div style={test_style}>
+                <blockquote>
+                  <img src={quote1} className={style.quote} alt="" /> Our plaza
+                  needed a facelift and we <br /> got just that with the
+                  sophisticated <br /> designs to our plaza. It definitely{" "}
+                  <br /> attracted much attention from passersby.{" "}
+                  <img src={quote2} className={style.quote} alt="" />
+                </blockquote>
+                <p>
+                  <img src={testi} alt="" />
+                  <span>
+                    Eagle Plaza <br />
+                    MR. Johnson Andrew
+                  </span>
+                </p>
+              </div>
+              <div style={test_style}>
+                <blockquote>
+                  <img src={quote1} className={style.quote} alt="" /> Our plaza
+                  needed a facelift and we <br /> got just that with the
+                  sophisticated <br /> designs to our plaza. It definitely{" "}
+                  <br /> attracted much attention from passersby.{" "}
+                  <img src={quote2} className={style.quote} alt="" />
+                </blockquote>
+                <p>
+                  <img src={testi} alt="" />
+                  <span>
+                    Eagle Plaza <br />
+                    MR. Johnson Andrew
+                  </span>
+                </p>
+              </div>
+            </section>
+            <nav>
+              <button>
+                <img src={left} alt="" onClick={testPrev} />
+              </button>
+              <button>
+                <img src={test === 0 ? dot1 : dot2} alt="" onClick={testOne} />
+              </button>
+              <button>
+                <img
+                  src={test === -100 ? dot1 : dot2}
+                  alt=""
+                  onClick={testTwo}
+                />
+              </button>
+              <button>
+                <img
+                  src={test === -200 ? dot1 : dot2}
+                  alt=""
+                  onClick={testThree}
+                />
+              </button>
+              <button>
+                <img
+                  src={test === -300 ? dot1 : dot2}
+                  alt=""
+                  onClick={testFour}
+                />
+              </button>
+              <button>
+                <img
+                  src={test === -400 ? dot1 : dot2}
+                  alt=""
+                  onClick={testFive}
+                />
+              </button>
+              <button>
+                <img
+                  src={test === -500 ? dot1 : dot2}
+                  alt=""
+                  onClick={testSix}
+                />
+              </button>
+              <button>
+                <img src={right} alt="" onClick={testNext} />
+              </button>
+            </nav>
           </nav>
         </div>
       </section>

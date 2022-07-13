@@ -1,29 +1,37 @@
 .hero {
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  line-height: 1.4;
   height: 90vh;
+  display: flex;
+  overflow: hidden;
+}
+.heroDiv {
+  height: 100%;
+  min-width: 100%;
+  width: 100%;
   padding: 100px 0 50px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url(./../assets/newhero.png);
-  background-position: center;
-  background-size: cover;
-  text-align: center;
-  line-height: 1.4;
+  transition: transform 0.8s ease-in-out;
 }
-.hero h1 {
+.heroDiv h1 {
   font-size: 60px;
   color: #fff;
 }
-.hero b {
+.heroDiv b {
   padding: 5px;
   background-color: rgba(248, 169, 17, 1);
 }
-.hero p {
+.heroDiv p {
   font-size: 20px;
+  margin: 20px 0;
   color: #fff;
 }
-.hero nav {
+.heroDiv nav {
   margin: 10px 0;
   display: flex;
   align-items: center;
@@ -54,10 +62,10 @@
   height: 30px;
   margin: 0 10px;
 }
-.hero nav:last-of-type {
+.heroDiv nav:last-of-type {
   margin: auto 0 0 0;
 }
-.hero nav:last-of-type img {
+.heroDiv nav:last-of-type img {
   margin: 0 10px;
   margin: 0 10px;
 }
@@ -125,6 +133,10 @@
   border-radius: 20px;
   display: grid;
   grid-template-columns: 50% 50%;
+  background-position: top 0px left 0px, bottom 0px right 0px;
+  background-image: url(./../assets/ring1.png), url(./../assets/ring2.png);
+  background-size: 80px, 80px;
+  background-repeat: no-repeat;
 }
 .about div nav:first-of-type span {
   padding: 20px;
@@ -190,6 +202,7 @@
 .services > div > nav p {
   font-size: 20px;
   line-height: 1.8;
+  padding-right: 20px;
 }
 .services nav > img {
   width: 100%;
@@ -254,21 +267,28 @@
   height: 18px;
 }
 .invest {
-  padding: 40px 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 40px 100px;
 }
 .invest h3 {
   opacity: 0.6;
   font-size: 30px;
 }
+.invest section {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
 .invest div {
   margin: 30px 0;
+  min-width: 100%;
   width: 100%;
   display: grid;
   grid-template-columns: 24% 24% 24% 24%;
   justify-content: space-between;
+  transition: transform 0.8s ease-in-out;
 }
 .invest div nav {
   display: flex;
@@ -558,13 +578,20 @@
   opacity: 0.6;
   font-size: 30px;
 }
+.case section {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
 .case div {
   padding: 40px 100px;
   margin: 40px 0;
   width: 100%;
+  min-width: 100%;
   display: grid;
   grid-template-columns: 24% 24% 24% 24%;
   justify-content: space-between;
+  transition: transform 0.8s ease-in-out;
 }
 .case div nav {
   background-color: white;
@@ -642,12 +669,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-position: bottom 60px left 0px, top 10% left 0px, top 0px left 25%,
-    bottom 30px left 20%, top 35% left 50px, top 25% right 6%,
-    bottom 10% right 0px, top 50% right 7%;
-  background-image: url(./../assets/test1.png), url(./../assets/test2.png),
-    url(./../assets/test3.png), url(./../assets/test4.png),
-    url(./../assets/test5.png), url(./../assets/test6.png),
+  background-position: top 10% left 20%, top 20% left 10%, top 30% left 10px,
+    top 55% left 0px, bottom 20% left 10px, bottom 5% left 7%,
+    bottom 0px left 15%, bottom -30px left 20%;
+  background-image: url(./../assets/test5.png), url(./../assets/test4.png),
+    url(./../assets/test3.png), url(./../assets/test2.png),
+    url(./../assets/test1.png), url(./../assets/test6.png),
     url(./../assets/test7.png), url(./../assets/test8.png);
   background-size: 70px, 60px, 70px, 70px, 70px, 70px, 50px, 70px;
   background-repeat: no-repeat;
@@ -682,6 +709,16 @@
   display: flex;
   flex-direction: column;
   padding: 40px;
+}
+.testimony section {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+.testimony section > div {
+  width: 100%;
+  min-width: 100%;
+  transition: transform 0.8s ease-in-out;
 }
 .testimony div > nav:last-of-type blockquote {
   line-height: 1.7;
