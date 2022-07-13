@@ -38,7 +38,12 @@ import study1 from "./../assets/redson1.jpg";
 import study2 from "./../assets/rebar1.png";
 import study3 from "./../assets/playground1.jpg";
 import study4 from "./../assets/newhero2.jpg";
-import testi from "./../assets/test.png";
+import test1 from "./../assets/test2.png";
+import test2 from "./../assets/Playground.jpg";
+import test3 from "./../assets/LOGO 1.png";
+import test4 from "./../assets/test3.png";
+import test5 from "./../assets/Redson Lounge.jpg";
+import test6 from "./../assets/test.png";
 import j1 from "./../assets/dezeen-magazine-logo-vector.png";
 import j2 from "./../assets/space-logo.png";
 import heineken from "./../assets/Heineken-Logo.png";
@@ -116,15 +121,6 @@ export default function Home() {
   function investThree() {
     setInvest(-200);
   }
-  function investFour() {
-    setInvest(-300);
-  }
-  function investFive() {
-    setInvest(-400);
-  }
-  function investSix() {
-    setInvest(-500);
-  }
   function investNext() {
     if (invest === 0) {
       setInvest(-100);
@@ -133,28 +129,10 @@ export default function Home() {
       setInvest(-200);
     }
     if (invest === -200) {
-      setInvest(-300);
-    }
-    if (invest === -300) {
-      setInvest(-400);
-    }
-    if (invest === -400) {
-      setInvest(-500);
-    }
-    if (invest === -500) {
-      return;
+      return
     }
   }
   function investPrev() {
-    if (invest === -500) {
-      setInvest(-400);
-    }
-    if (invest === -400) {
-      setInvest(-300);
-    }
-    if (invest === -300) {
-      setInvest(-200);
-    }
     if (invest === -200) {
       setInvest(-100);
     }
@@ -175,56 +153,20 @@ export default function Home() {
   function studyTwo() {
     setStudy(-100);
   }
-  function studyThree() {
-    setStudy(-200);
-  }
-  function studyFour() {
-    setStudy(-300);
-  }
-  function studyFive() {
-    setStudy(-400);
-  }
-  function studySix() {
-    setStudy(-500);
-  }
   function studyNext() {
     if (study === 0) {
       setStudy(-100);
     }
     if (study === -100) {
-      setStudy(-200);
-    }
-    if (study === -200) {
-      setStudy(-300);
-    }
-    if (study === -300) {
-      setStudy(-400);
-    }
-    if (study === -400) {
-      setStudy(-500);
-    }
-    if (study === -500) {
-      return;
+      return
     }
   }
   function studyPrev() {
-    if (study === -500) {
-      setStudy(-400);
-    }
-    if (study === -400) {
-      setStudy(-300);
-    }
-    if (study === -300) {
-      setStudy(-200);
-    }
-    if (study === -200) {
-      setStudy(-100);
-    }
     if (study === -100) {
       setStudy(0);
     }
     if (study === 0) {
-      return;
+      return
     }
   }
   let study_style = {
@@ -243,18 +185,6 @@ export default function Home() {
     setDeal(Deals.three);
     setDbg(herobg3);
   }
-  function dealFour() {
-    setDeal(Deals.four);
-    setDbg(herobg4);
-  }
-  function dealFive() {
-    setDeal(Deals.five);
-    setDbg(herobg5);
-  }
-  function dealSix() {
-    setDeal(Deals.six);
-    setDbg(herobg1);
-  }
   function dealNext() {
     if (deal === Deals.one) {
       setDeal(Deals.two);
@@ -265,34 +195,10 @@ export default function Home() {
       setDbg(herobg3);
     }
     if (deal === Deals.three) {
-      setDeal(Deals.four);
-      setDbg(herobg4);
-    }
-    if (deal === Deals.four) {
-      setDeal(Deals.five);
-      setDbg(herobg5);
-    }
-    if (deal === Deals.five) {
-      setDeal(Deals.six);
-      setDbg(herobg1);
-    }
-    if (deal === Deals.six) {
-      return;
+      return
     }
   }
   function dealPrev() {
-    if (deal === Deals.six) {
-      setDeal(Deals.five);
-      setDbg(herobg5);
-    }
-    if (deal === Deals.five) {
-      setDeal(Deals.four);
-      setDbg(herobg4);
-    }
-    if (deal === Deals.four) {
-      setDeal(Deals.three);
-      setDbg(herobg3);
-    }
     if (deal === Deals.three) {
       setDeal(Deals.two);
       setDbg(herobg2);
@@ -551,6 +457,17 @@ export default function Home() {
           <nav>
             <img src={service1} alt="" />
             <h4>HOTEL CONSULTING</h4>
+            <p>
+              Get expert advice from professionals with over 10 years of
+              experience in risk management, branding and strategy, operations
+              and many other areas of the hospitality industry. Get expert
+              advice from professionals with over 10 years of experience in risk
+              management, branding and strategy, operations and many other areas
+              of the hospitality industry.Get expert advice from professionals
+              with over 10 years of experience in risk management, branding and
+              strategy, operations and many other areas of the hospitality
+              industry.
+            </p>
             <p>
               Get expert advice from professionals with over 10 years of
               experience in risk management, branding and strategy, operations
@@ -947,27 +864,6 @@ export default function Home() {
             />
           </button>
           <button>
-            <img
-              src={invest === -300 ? dot1 : dot2}
-              alt=""
-              onClick={investFour}
-            />
-          </button>
-          <button>
-            <img
-              src={invest === -400 ? dot1 : dot2}
-              alt=""
-              onClick={investFive}
-            />
-          </button>
-          <button>
-            <img
-              src={invest === -500 ? dot1 : dot2}
-              alt=""
-              onClick={investSix}
-            />
-          </button>
-          <button>
             <img src={right} alt="" onClick={investNext} />
           </button>
         </nav>
@@ -1087,27 +983,6 @@ export default function Home() {
                     src={deal === Deals.three ? dot1 : dot2}
                     alt=""
                     onClick={dealThree}
-                  />
-                </button>
-                <button>
-                  <img
-                    src={deal === Deals.four ? dot1 : dot2}
-                    alt=""
-                    onClick={dealFour}
-                  />
-                </button>
-                <button>
-                  <img
-                    src={deal === Deals.five ? dot1 : dot2}
-                    alt=""
-                    onClick={dealFive}
-                  />
-                </button>
-                <button>
-                  <img
-                    src={deal === Deals.six ? dot1 : dot2}
-                    alt=""
-                    onClick={dealSix}
                   />
                 </button>
                 <button>
@@ -1412,30 +1287,6 @@ export default function Home() {
             <img src={study === -100 ? dot1 : dot2} alt="" onClick={studyTwo} />
           </button>
           <button>
-            <img
-              src={study === -200 ? dot1 : dot2}
-              alt=""
-              onClick={studyThree}
-            />
-          </button>
-          <button>
-            <img
-              src={study === -300 ? dot1 : dot2}
-              alt=""
-              onClick={studyFour}
-            />
-          </button>
-          <button>
-            <img
-              src={study === -400 ? dot1 : dot2}
-              alt=""
-              onClick={studyFive}
-            />
-          </button>
-          <button>
-            <img src={study === -500 ? dot1 : dot2} alt="" onClick={studySix} />
-          </button>
-          <button>
             <img src={right} alt="" onClick={studyNext} />
           </button>
         </nav>
@@ -1447,23 +1298,93 @@ export default function Home() {
         <h3>Testimonials</h3>
         <div>
           <nav>
-            <p>Successful hospitality businesses we’ve built</p>
+            <p>
+              Successful hospitality <br /> businesses we’ve built
+            </p>
             <span>5 star rating</span>
           </nav>
           <nav>
             <section>
               <div style={test_style}>
                 <blockquote>
-                  <img src={quote1} className={style.quote} alt="" /> Our plaza
-                  needed a facelift and we <br /> got just that with the
-                  sophisticated <br /> designs to our plaza. It definitely{" "}
-                  <br /> attracted much attention from passersby.{" "}
+                  <img src={quote1} className={style.quote} alt="" /> Their team
+                  worked patiently with us, paying attention to every little
+                  detail of our design project. They were always available to
+                  answer our enquiries and the job was beautifully executed. We
+                  still refer to them years later for resources, advice and
+                  strategy with anything that comes up.
                   <img src={quote2} className={style.quote} alt="" />
                 </blockquote>
                 <p>
-                  <img src={testi} alt="" />
+                  <img src={test1} alt="" />
                   <span>
-                    Eagle Plaza <br />
+                    The Heavens <br />
+                    MR. Johnson Andrew
+                  </span>
+                </p>
+              </div>
+              <div style={test_style}>
+                <blockquote>
+                  <img src={quote1} className={style.quote} alt="" /> We had
+                  access to their vast network of professionals and contractors
+                  that helped our market research with useful information that
+                  helped us launch and attract new customers almost immediately.
+                  <img src={quote2} className={style.quote} alt="" />
+                </blockquote>
+                <p>
+                  <img src={test2} alt="" />
+                  <span>
+                    The Playground <br />
+                    MR. Johnson Andrew
+                  </span>
+                </p>
+              </div>
+              <div style={test_style}>
+                <blockquote>
+                  <img src={quote1} className={style.quote} alt="" /> Our fruit
+                  bar was so functionally designed by Jefferson. We were worried
+                  about how to make such a concept work but they were able to
+                  get it done and collaborate with us without stress
+                  <img src={quote2} className={style.quote} alt="" />
+                </blockquote>
+                <p>
+                  <img src={test3} alt="" />
+                  <span>
+                    Vital Fruity <br />
+                    MR. Johnson Andrew
+                  </span>
+                </p>
+              </div>
+              <div style={test_style}>
+                <blockquote>
+                  <img src={quote1} className={style.quote} alt="" /> The
+                  building of our lounge would have gone sideways if we did not
+                  have Jefferson Hospitality’s project management team to keep
+                  our workers and contractors in line. We were able to complete
+                  our project in record time!
+                  <img src={quote2} className={style.quote} alt="" />
+                </blockquote>
+                <p>
+                  <img src={test4} alt="" />
+                  <span>
+                    Rebar <br />
+                    MR. Johnson Andrew
+                  </span>
+                </p>
+              </div>
+              <div style={test_style}>
+                <blockquote>
+                  <img src={quote1} className={style.quote} alt="" /> Our
+                  franchise needed expert advice on how to expand and Jefferson
+                  gave us that advice plus the resources to do it. With the
+                  advice on franchising and the network of professionals we had
+                  access to, expanding was easy.
+                  <img src={quote2} className={style.quote} alt="" />
+                </blockquote>
+                <p>
+                  <img src={test5} alt="" />
+                  <span>
+                    Redson Lounge <br />
                     MR. Johnson Andrew
                   </span>
                 </p>
@@ -1471,77 +1392,13 @@ export default function Home() {
               <div style={test_style}>
                 <blockquote>
                   <img src={quote1} className={style.quote} alt="" /> Our plaza
-                  needed a facelift and we <br /> got just that with the
-                  sophisticated <br /> designs to our plaza. It definitely{" "}
-                  <br /> attracted much attention from passersby.{" "}
+                  needed a facelift and we got just that with the sophisticated
+                  designs to our plaza. It definitely attracted much attention
+                  from passersby.
                   <img src={quote2} className={style.quote} alt="" />
                 </blockquote>
                 <p>
-                  <img src={testi} alt="" />
-                  <span>
-                    Eagle Plaza <br />
-                    MR. Johnson Andrew
-                  </span>
-                </p>
-              </div>
-              <div style={test_style}>
-                <blockquote>
-                  <img src={quote1} className={style.quote} alt="" /> Our plaza
-                  needed a facelift and we <br /> got just that with the
-                  sophisticated <br /> designs to our plaza. It definitely{" "}
-                  <br /> attracted much attention from passersby.{" "}
-                  <img src={quote2} className={style.quote} alt="" />
-                </blockquote>
-                <p>
-                  <img src={testi} alt="" />
-                  <span>
-                    Eagle Plaza <br />
-                    MR. Johnson Andrew
-                  </span>
-                </p>
-              </div>
-              <div style={test_style}>
-                <blockquote>
-                  <img src={quote1} className={style.quote} alt="" /> Our plaza
-                  needed a facelift and we <br /> got just that with the
-                  sophisticated <br /> designs to our plaza. It definitely{" "}
-                  <br /> attracted much attention from passersby.{" "}
-                  <img src={quote2} className={style.quote} alt="" />
-                </blockquote>
-                <p>
-                  <img src={testi} alt="" />
-                  <span>
-                    Eagle Plaza <br />
-                    MR. Johnson Andrew
-                  </span>
-                </p>
-              </div>
-              <div style={test_style}>
-                <blockquote>
-                  <img src={quote1} className={style.quote} alt="" /> Our plaza
-                  needed a facelift and we <br /> got just that with the
-                  sophisticated <br /> designs to our plaza. It definitely{" "}
-                  <br /> attracted much attention from passersby.{" "}
-                  <img src={quote2} className={style.quote} alt="" />
-                </blockquote>
-                <p>
-                  <img src={testi} alt="" />
-                  <span>
-                    Eagle Plaza <br />
-                    MR. Johnson Andrew
-                  </span>
-                </p>
-              </div>
-              <div style={test_style}>
-                <blockquote>
-                  <img src={quote1} className={style.quote} alt="" /> Our plaza
-                  needed a facelift and we <br /> got just that with the
-                  sophisticated <br /> designs to our plaza. It definitely{" "}
-                  <br /> attracted much attention from passersby.{" "}
-                  <img src={quote2} className={style.quote} alt="" />
-                </blockquote>
-                <p>
-                  <img src={testi} alt="" />
+                  <img src={test6} alt="" />
                   <span>
                     Eagle Plaza <br />
                     MR. Johnson Andrew
