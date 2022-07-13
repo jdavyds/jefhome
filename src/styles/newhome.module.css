@@ -499,11 +499,14 @@
 }
 .deals div figure {
   width: 100%;
-  height: auto;
+  height: 80vh;
+  background-color: aqua;
+  animation: trans 3s;
 }
 .deals figure img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
 }
 .deals > div > nav {
   transform: translateX(-40%);
@@ -522,6 +525,17 @@
   font-size: 20px;
   margin: 10px 0;
   color: rgb(248, 169, 17);
+  transition: all 0.8s ease-in-out;
+  animation: trans 2s;
+  opacity: 1;
+}
+@keyframes trans {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .deals nav p {
   line-height: 1.6;

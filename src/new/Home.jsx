@@ -33,7 +33,7 @@ import training from "./../assets/training.png";
 import training1 from "./../assets/training1.png";
 import training2 from "./../assets/training2.png";
 import training3 from "./../assets/training3.png";
-import deal from "./../assets/deals.png";
+import dealImg from "./../assets/deals.png";
 import study1 from "./../assets/redson1.jpg";
 import study2 from "./../assets/rebar1.png";
 import study3 from "./../assets/playground1.jpg";
@@ -54,13 +54,35 @@ import herobg2 from "./../assets/newhero2.jpg";
 import herobg3 from "./../assets/newhero3.jpg";
 import herobg4 from "./../assets/newhero4.png";
 import herobg5 from "./../assets/newhero5.jpg";
-
+const Deals = {
+  one: [
+    "Sales",
+    "Temple Grills is offering 20% off on all steaks delivered from the 22nd -30th of June, 2022. Click here for details",
+  ],
+  two: [
+    'Purchases', 'Temple Grills is offering 20% off on all steaks delivered from the 22nd -30th of June, 2022. Click here for details',
+  ],
+  three: [
+    'Income', 'Temple Grills is offering 20% off on all steaks delivered from the 22nd -30th of June, 2022. Click here for details',
+  ], 
+  four: [
+    'Expenses', 'Temple Grills is offering 20% off on all steaks delivered from the 22nd -30th of June, 2022. Click here for details',
+  ],
+  five: [
+    'Dividend', 'Temple Grills is offering 20% off on all steaks delivered from the 22nd -30th of June, 2022. Click here for details',
+  ],
+  six: [
+    'Loan', 'Temple Grills is offering 20% off on all steaks delivered from the 22nd -30th of June, 2022. Click here for details',
+  ]
+};
 export default function Home() {
   const [trans, setTrans] = useState(0);
   const [invest, setInvest] = useState(0);
   const [study, setStudy] = useState(0);
   const [test, setTest] = useState(0)
   const [bg, setbg] = useState(herobg1);
+  const [dbg, setDbg] = useState(dealImg);
+  const [deal, setDeal] = useState(Deals.one);
   function heroOne() {
     setTrans(0);
     setbg(herobg1);
@@ -209,6 +231,80 @@ export default function Home() {
     transform: "translateX(" + study + "% )",
   };
 
+  function dealOne() {
+    setDeal(Deals.one);
+    setDbg(dealImg);
+  }
+  function dealTwo() {
+    setDeal(Deals.two);
+    setDbg(herobg2);
+  }
+  function dealThree() {
+    setDeal(Deals.three);
+    setDbg(herobg3);
+  }
+  function dealFour() {
+    setDeal(Deals.four);
+    setDbg(herobg4);
+  }
+  function dealFive() {
+    setDeal(Deals.five);
+    setDbg(herobg5);
+  }
+  function dealSix() {
+    setDeal(Deals.six);
+    setDbg(herobg1);
+  }
+  function dealNext() {
+    if (deal === Deals.one) {
+      setDeal(Deals.two);
+      setDbg(herobg2);
+    }
+    if (deal === Deals.two) {
+      setDeal(Deals.three);
+      setDbg(herobg3);
+    }
+    if (deal === Deals.three) {
+      setDeal(Deals.four);
+      setDbg(herobg4);
+    }
+    if (deal === Deals.four) {
+      setDeal(Deals.five);
+      setDbg(herobg5);
+    }
+    if (deal === Deals.five) {
+      setDeal(Deals.six);
+      setDbg(herobg1);
+    }
+    if (deal === Deals.six) {
+      return;
+    }
+  }
+  function dealPrev() {
+    if (deal === Deals.six) {
+      setDeal(Deals.five);
+      setDbg(herobg5);
+    }
+    if (deal === Deals.five) {
+      setDeal(Deals.four);
+      setDbg(herobg4);
+    }
+    if (deal === Deals.four) {
+      setDeal(Deals.three);
+      setDbg(herobg3);
+    }
+    if (deal === Deals.three) {
+      setDeal(Deals.two);
+      setDbg(herobg2);
+    }
+    if (deal === Deals.two) {
+      setDeal(Deals.one);
+      setDbg(herobg1);
+    }
+    if (deal === Deals.one) {
+      return;
+    }
+  }
   function testOne() {
     setTest(0);
   }
@@ -962,39 +1058,60 @@ export default function Home() {
         <h3>Deals</h3>
         <div>
           <figure>
-            <img src={deal} alt="" />
+            <img src={dbg} alt="" />
           </figure>
           <nav>
-            <h4>Sales</h4>
-            <p>
-              Temple Grills is offering 20% off on all steaks delivered from the
-              22nd -30th of June, 2022. Click here for details
-            </p>
+            <h4>{deal[0]}</h4>
+            <p>{deal[1]}</p>
             <div className={style.dealNav}>
               <nav>
                 <button>
-                  <img src={left} alt="" />
+                  <img src={left} alt="" onClick={dealPrev} />
                 </button>
                 <button>
-                  <img src={dot1} alt="" />
+                  <img
+                    src={deal === Deals.one ? dot1 : dot2}
+                    alt=""
+                    onClick={dealOne}
+                  />
                 </button>
                 <button>
-                  <img src={dot2} alt="" />
+                  <img
+                    src={deal === Deals.two ? dot1 : dot2}
+                    alt=""
+                    onClick={dealTwo}
+                  />
                 </button>
                 <button>
-                  <img src={dot2} alt="" />
+                  <img
+                    src={deal === Deals.three ? dot1 : dot2}
+                    alt=""
+                    onClick={dealThree}
+                  />
                 </button>
                 <button>
-                  <img src={dot2} alt="" />
+                  <img
+                    src={deal === Deals.four ? dot1 : dot2}
+                    alt=""
+                    onClick={dealFour}
+                  />
                 </button>
                 <button>
-                  <img src={dot2} alt="" />
+                  <img
+                    src={deal === Deals.five ? dot1 : dot2}
+                    alt=""
+                    onClick={dealFive}
+                  />
                 </button>
                 <button>
-                  <img src={dot2} alt="" />
+                  <img
+                    src={deal === Deals.six ? dot1 : dot2}
+                    alt=""
+                    onClick={dealSix}
+                  />
                 </button>
                 <button>
-                  <img src={right} alt="" />
+                  <img src={right} alt="" onClick={dealNext} />
                 </button>
               </nav>
               <Link to="/">
