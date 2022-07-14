@@ -67,7 +67,6 @@
 }
 .heroDiv nav:last-of-type img {
   margin: 0 10px;
-  margin: 0 10px;
 }
 .partners {
   width: 80%;
@@ -177,6 +176,118 @@
 .about a img {
   margin: 0 10px;
   height: 18px;
+}
+@media only screen and (max-width: 850px) {
+  .hero {
+    height: fit-content;
+  }
+  .heroDiv {
+    padding: 20px 15px;
+  }
+  .heroDiv h1 {
+    font-size: 25px;
+    line-height: 1.7;
+  }
+  .heroDiv b {
+    padding: 2px;
+  }
+  .heroDiv p {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  .hero_btn {
+    border-radius: 7px;
+    height: 40px;
+    min-width: fit-content;
+    padding: 0 10px;
+    font-size: 14px;
+  }
+  .hero_vid {
+    height: 40px;
+    min-width: fit-content;
+    margin-left: 5px;
+    font-size: 14px;
+  }
+  .hero_vid img {
+    height: 25px;
+    margin: 0 5px;
+  }
+  .heroDiv nav:last-of-type {
+    margin-top: 40px;
+    width: 100%;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 40px 40px 40px 40px 40px;
+  }
+  .heroDiv nav:last-of-type img {
+    margin: 0 5px;
+    width: 100%;
+  }
+  .partners {
+    width: 100%;
+    margin: 30px auto;
+    padding: 20px 15px;
+    border-radius: 0;
+    justify-content: center;
+  }
+  .partners small {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+  }
+  .partners figure {
+    padding: 15px;
+    display: flex;
+    justify-content: flex-start;
+    overflow-x: scroll;
+  }
+  .partners figure img {
+    margin: 10px;
+  }
+  .about {
+    padding: 0 15px;
+  }
+  .about h3 {
+    font-size: 22px;
+  }
+  .about div {
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+  .about div nav:first-of-type nav {
+    padding: 10px 0;
+    border-radius: 10px;
+    background-size: 60px, 60px;
+  }
+  .about div nav:first-of-type span {
+    padding: 10px;
+    font-size: 13px;
+  }
+  .about nav b {
+    font-size: 22px;
+  }
+  .about nav:last-of-type {
+    padding: 10px;
+    margin: 10px 0;
+    height: auto;
+    border-radius: 10px;
+  }
+  .about nav p {
+    margin: 10px 0;
+  }
+  .about nav a {
+    margin: 20px auto;
+    padding: 0;
+    height: fit-content;
+    width: fit-content;
+    font-size: 16px;
+  }
+  .about a img {
+    margin: 0 5px;
+    height: 15px;
+  }
 }
 .services {
   padding: 40px 100px;
@@ -336,6 +447,104 @@
 .invest button:last-of-type {
   margin: 0 20px;
 }
+@media only screen and (max-width: 850px) {
+  .services {
+    padding: 20px 15px;
+  }
+  .services h3 {
+    font-size: 22px;
+  }
+  .services > div {
+    display: flex;
+    flex-direction: column;
+  }
+  .services > div > nav {
+    padding-right: unset;
+  }
+  .services > div > nav p {
+    padding-right: unset;
+    font-size: 14px;
+  }
+  .services h4 {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  .services p {
+    font-size: 14px;
+    color: #333;
+    margin: 0;
+  }
+  .services a {
+    height: fit-content;
+    margin: 20px 0;
+    font-size: 16px;
+  }
+  .services a img {
+    margin: 0 5px;
+    height: 15px;
+  }
+  .serviceGrid {
+    display: flex;
+    flex-direction: column;
+  }
+  .services > button {
+    height: fit-content;
+    margin: 0;
+    font-size: 16px;
+  }
+  .services button img {
+    margin: 0 5px;
+    height: 15px;
+  }
+  .invest {
+    padding: 40px 15px;
+  }
+  .invest h3 {
+    font-size: 22px;
+  }
+  .invest section {
+    display: flex;
+    overflow: hidden;
+  }
+  .invest div {
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+  }
+  .invest div nav {
+    margin-right: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .invest div nav:last-of-type {
+    margin-right: 0;
+  }
+  .invest div > img {
+    width: 100%;
+    height: auto;
+  }
+  .invest h4 {
+    font-size: 18px;
+  }
+  .invest div a {
+    margin: 10px 0;
+    height: fit-content;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(248, 169, 17);
+  }
+  .invest a img {
+    margin: 0 5px;
+    height: 15px;
+  }
+  .invest > nav button {
+    width: fit-content;
+    height: 30px;
+  }
+}
 .start {
   display: flex;
   flex-direction: column;
@@ -480,6 +689,86 @@
   margin: 0 10px;
   height: 18px;
 }
+@media only screen and (max-width: 850px) {
+  .start h3 {
+    font-size: 22px;
+  }
+  .start div {
+    margin: 50px 0;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  .start nav {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
+    transform: unset;
+  }
+  .start nav p {
+    font-size: 16px;
+  }
+  .start figure {
+    width: 100%;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .start figure img {
+    width: 100%;
+    height: auto;
+  }
+  .start a {
+    margin: 15px 0;
+    height: fit-content;
+    font-size: 16px;
+  }
+  .start a img {
+    margin: 0 5px;
+    height: 15px;
+  }
+  .training {
+    padding: 0 15px;
+  }
+  .training h3 {
+    font-size: 22px;
+  }
+  .training div:first-of-type {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+  }
+  .training div:first-of-type nav {
+    padding: 15px;
+    margin-right: unset;
+    height: fit-content;
+    border-radius: 15px;
+  }
+  .training div:first-of-type p,
+  .training div:first-of-type b {
+    font-size: 16px;
+    margin: 20px 0;
+  }
+  .training div:last-of-type {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .training div:last-of-type h4 {
+    font-size: 18px;
+  }
+  .training div:last-of-type a {
+    margin: 20px 0;
+    height: fit-content;
+    font-size: 16px;
+  }
+  .training a img {
+    margin: 0 5px;
+    height: 15px;
+  }
+}
 .deals {
   padding: 40px 100px;
   display: flex;
@@ -500,7 +789,6 @@
 .deals div figure {
   width: 100%;
   height: 80vh;
-  background-color: aqua;
   animation: trans 3s;
 }
 .deals figure img {
@@ -577,6 +865,55 @@
 .dealNav a img {
   margin: 0 10px;
   height: 18px;
+}
+@media only screen and (max-width: 850px) {
+  .deals {
+    padding: 20px 15px;
+  }
+  .deals h3 {
+    font-size: 22px;
+  }
+  .deals > div {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .deals div figure {
+    height: auto;
+  }
+  .deals > div > nav {
+    transform: translateY(-50px);
+    border-radius: 10px;
+    height: 50%;
+    width: 95%;
+    padding: 15px;
+    margin-top: unset;
+    margin: 0 auto;
+  }
+  .deals nav h4 {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  .deals nav p {
+    font-size: 16px;
+  }
+  .dealNav {
+    flex-direction: column-reverse;
+  }
+  .dealNav nav {
+    margin: 10px auto;
+  }
+  .dealNav a {
+    border-radius: 7px;
+    padding: 5px 10px;
+    margin: 0 auto;
+    height: fit-content;
+    font-size: 16px;
+  }
+  .dealNav a img {
+    margin: 0 5px;
+    height: 15px;
+  }
 }
 .case {
   display: flex;
@@ -773,6 +1110,94 @@
   height: 30px;
   width: 30px;
   display: inline;
+}
+@media only screen and (max-width: 850px) {
+  .case {
+    margin: 20px 0;
+  }
+  .case h3 {
+    font-size: 22px;
+  }
+  .case div {
+    padding: 20px 15px;
+    margin: 20px 0;
+    display: flex;
+    overflow: scroll;
+  }
+  .case div nav {
+    width: 100%;
+    min-width: 100%;
+    margin-right: 15px;
+  }
+  .case div nav:last-of-type {
+    margin-right: 0;
+  }
+  .case div nav > img {
+    height: calc(100vw - 30px);
+  }
+  .case div h4 {
+    font-size: 18px;
+  }
+  .case div a {
+    margin: auto 15px 20px;
+    height: fit-content;
+    font-size: 16px;
+  }
+  .case div a img {
+    margin: 0 5px;
+    height: 15px;
+  }
+  .case > a {
+    border-radius: 7px;
+    height: fit-content;
+    padding: 5px 10px;
+    margin: 50px 0;
+    font-size: 16px;
+  }
+  .case a img {
+    margin: 0 5px;
+    height: 15px;
+  }
+  .testimony {
+    margin: 50px 0;
+    padding: 0 15px;
+  }
+  .testimony h3 {
+    font-size: 22px;
+  }
+  .testimony > div {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    background-image: unset;
+  }
+  .testimony div > nav:first-of-type p {
+    font-size: 22px;
+  }
+  .testimony div > nav:first-of-type span {
+    font-size: 20px;
+  }
+  .testimony > div > nav:last-of-type {
+    padding: 0px;
+  }
+  .testimony section {
+    overflow: hidden;
+  }
+  .testimony div > nav:last-of-type blockquote {
+    font-size: 16px;
+  }
+  .testimony div > nav:last-of-type p {
+    font-size: 14px;
+  }
+  .testimony div > nav:last-of-type p img {
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+  }
+  .quote {
+    height: 18px;
+    width: 18px;
+  }
 }
 .jpart {
   display: flex;

@@ -127,6 +127,7 @@ header a:hover {
     display: none;
   }
   .hamHead {
+    z-index: 22222;
     position: absolute;
     top: 0;
     width: 100%;
