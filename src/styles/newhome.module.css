@@ -15,6 +15,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: #333;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1459,52 +1460,11 @@
     position: relative;
     z-index: 222;
   }
-  .blog section div nav::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgb(105, 104, 104);
-    opacity: 0.2;
-    z-index: 11;
-  }
   .blog section div:first-of-type nav {
     height: calc(100vw - 30px);
   }
   .blog section div:last-of-type nav {
     height: calc(100vw - 30px);
-  }
-  .blog section div:first-of-type nav:first-of-type {
-    background-position: center;
-    background-image: url(./../assets/blog1.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  .blog section div:first-of-type nav:last-of-type {
-    background-position: center;
-    background-image: url(./../assets/blog2.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  .blog section div:last-of-type nav:first-of-type {
-    background-position: center;
-    background-image: url(./../assets/blog3.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  .blog section div:last-of-type nav:nth-of-type(2) {
-    background-position: center;
-    background-image: url(./../assets/blog4.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  .blog section div:last-of-type nav:last-of-type {
-    background-position: center;
-    background-image: url(./../assets/blog5.png);
-    background-size: cover;
-    background-repeat: no-repeat;
   }
 }
 .jpart {
@@ -1701,9 +1661,6 @@
   }
   .tell h2 {
     font-size: 30px;
-  }
-  .tell h2 br {
-    display: none;
   }
   .tell p {
     font-size: 16px;

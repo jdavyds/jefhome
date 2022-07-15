@@ -295,18 +295,12 @@ export default function Home() {
     transform: "translateX(" + test + "% )",
   };
   const ref = useRef(null);
-      const customerLogo = useRef(null);
 
   return (
     <div>
       <Header />
-      <Rerousel itemRef={customerLogo}>
-        {deal.map((c) => {
-          return <img key={c} image={c} ref={customerLogo} alt=''/>;
-        })}
-      </Rerousel>
       <section className={style.hero}>
-        <Rerousel itemRef={ref}>
+        <Rerousel itemRef={ref} interval={10000} >
           <div
             className={style.heroDiv}
             ref={ref}

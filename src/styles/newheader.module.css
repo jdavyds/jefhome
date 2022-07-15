@@ -17,7 +17,7 @@
   display: flex;
 }
 .prehead nav:first-of-type span:last-of-type {
-  background: rgb(21, 22, 22);
+  background: gray;
   padding: 10px;
   color: white;
   border-radius: 5px;
