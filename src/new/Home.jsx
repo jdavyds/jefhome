@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import style from "./../styles/newhome.module.css";
 import Footer from "./Footer";
 import Header from "./Header";
@@ -15,6 +15,7 @@ import heavens from "./../assets/Heavens.jpg";
 import playground from "./../assets/Playground.jpg";
 import abt from "./../assets/newabt.png";
 import exp from "./../assets/export-yellow.png";
+import expw from "./../assets/export-white.png";
 import { Link } from "react-router-dom";
 import service1 from "./../assets/service1.png";
 import service2 from "./../assets/service2.png";
@@ -59,58 +60,79 @@ import herobg2 from "./../assets/newhero2.jpg";
 import herobg3 from "./../assets/newhero3.jpg";
 import herobg4 from "./../assets/newhero4.png";
 import herobg5 from "./../assets/newhero5.jpg";
+import started from "./../assets/start1.png";
+import star from "./../assets/star.png";
+import { Rerousel } from "rerousel";
+
 const Deals = {
   one: [
     "Sales",
     "Temple Grills is offering 20% off on all steaks delivered from the 22nd -30th of June, 2022. Click here for details",
   ],
   two: [
-    'Purchases', 'Temple Grills is offering 20% off on all steaks delivered from the 22nd -30th of June, 2022. Click here for details',
+    "Purchases",
+    "Temple Grills is offering 20% off on all steaks delivered from the 22nd -30th of June, 2022. Click here for details",
   ],
   three: [
-    'Income', 'Temple Grills is offering 20% off on all steaks delivered from the 22nd -30th of June, 2022. Click here for details',
-  ], 
+    "Income",
+    "Temple Grills is offering 20% off on all steaks delivered from the 22nd -30th of June, 2022. Click here for details",
+  ],
   four: [
-    'Expenses', 'Temple Grills is offering 20% off on all steaks delivered from the 22nd -30th of June, 2022. Click here for details',
+    "Expenses",
+    "Temple Grills is offering 20% off on all steaks delivered from the 22nd -30th of June, 2022. Click here for details",
   ],
   five: [
-    'Dividend', 'Temple Grills is offering 20% off on all steaks delivered from the 22nd -30th of June, 2022. Click here for details',
+    "Dividend",
+    "Temple Grills is offering 20% off on all steaks delivered from the 22nd -30th of June, 2022. Click here for details",
   ],
   six: [
-    'Loan', 'Temple Grills is offering 20% off on all steaks delivered from the 22nd -30th of June, 2022. Click here for details',
-  ]
+    "Loan",
+    "Temple Grills is offering 20% off on all steaks delivered from the 22nd -30th of June, 2022. Click here for details",
+  ],
 };
 export default function Home() {
-  const [trans, setTrans] = useState(0);
+  // const [trans, setTrans] = useState(0);
   const [invest, setInvest] = useState(0);
   const [study, setStudy] = useState(0);
-  const [test, setTest] = useState(0)
-  const [bg, setbg] = useState(herobg1);
+  const [test, setTest] = useState(0);
   const [dbg, setDbg] = useState(dealImg);
   const [deal, setDeal] = useState(Deals.one);
-  function heroOne() {
-    setTrans(0);
-    setbg(herobg1);
-  }
-  function heroTwo() {
-    setTrans(-100);
-    setbg(herobg2);
-  }
-  function heroThree() {
-    setTrans(-200);
-    setbg(herobg3);
-  }
-  function heroFour() {
-    setTrans(-300);
-    setbg(herobg4);
-  }
-  function heroFive() {
-    setTrans(-400);
-    setbg(herobg5);
-  }
-  let hero_change = {
-    transform: "translateX(" + trans + "% )",
-  };
+  // function heroOne() {
+  //   setTrans(0);
+  // }
+  // function heroTwo() {
+  //   setTrans(-100);
+  // }
+  // function heroThree() {
+  //   setTrans(-200);
+  // }
+  // function heroFour() {
+  //   setTrans(-300);
+  // }
+  // function heroFive() {
+  //   setTrans(-400);
+  // }
+  // useEffect(() => {
+  //   if (window.innerWidth > 808) {
+  //     setTimeout(() => {
+  //       if(trans === 0) {
+  //         setTrans(-100)
+  //       }
+  //       if(trans === -100) {
+  //         setTrans(-200)
+  //       }
+  //       if(trans === -200) {
+  //         setTrans(-300)
+  //       }
+  //       if (trans === -300) {
+  //         setTrans(-400);
+  //       }
+  //       if (trans === -400) {
+  //         setTrans(0);
+  //       }
+  //     }, 5000);
+  //   }
+  // }, [trans]);
 
   function investOne() {
     setInvest(0);
@@ -129,7 +151,7 @@ export default function Home() {
       setInvest(-200);
     }
     if (invest === -200) {
-      return
+      return;
     }
   }
   function investPrev() {
@@ -158,7 +180,7 @@ export default function Home() {
       setStudy(-100);
     }
     if (study === -100) {
-      return
+      return;
     }
   }
   function studyPrev() {
@@ -166,7 +188,7 @@ export default function Home() {
       setStudy(0);
     }
     if (study === 0) {
-      return
+      return;
     }
   }
   let study_style = {
@@ -195,7 +217,7 @@ export default function Home() {
       setDbg(herobg3);
     }
     if (deal === Deals.three) {
-      return
+      return;
     }
   }
   function dealPrev() {
@@ -272,120 +294,155 @@ export default function Home() {
   let test_style = {
     transform: "translateX(" + test + "% )",
   };
+  const ref = useRef(null);
+      const customerLogo = useRef(null);
+
   return (
     <div>
       <Header />
-      <section className={style.hero} style={{ backgroundImage: `url(${bg})` }}>
-        <div className={style.heroDiv} style={hero_change}>
-          <h1>
-            We build successful <br /> <b>Hospitality</b> businesses
-          </h1>
-          <p>
-            Build your hospitality business with us and achieve <br />{" "}
-            excellence in a shorter time.
-          </p>
-          <nav>
-            <button className={style.hero_btn}>Request Consultation</button>
-            <button className={style.hero_vid}>
-              <img src={vid} alt="" /> Watch Video
-            </button>
-          </nav>
-          <nav>
-            <img src={hero1} alt="" onClick={heroOne} />
-            <img src={hero2} alt="" onClick={heroTwo} />
-            <img src={hero2} alt="" onClick={heroThree} />
-            <img src={hero2} alt="" onClick={heroFour} />
-            <img src={hero2} alt="" onClick={heroFive} />
-          </nav>
-        </div>
-        <div className={style.heroDiv} style={hero_change}>
-          <h1>
-            We build successful <br /> <b>Hospitality</b> businesses
-          </h1>
-          <p>
-            Build your hospitality business with us and achieve <br />{" "}
-            excellence in a shorter time.
-          </p>
-          <nav>
-            <button className={style.hero_btn}>Request Consultation</button>
-            <button className={style.hero_vid}>
-              <img src={vid} alt="" /> Watch Video
-            </button>
-          </nav>
-          <nav>
-            <img src={hero2} alt="" onClick={heroOne} />
-            <img src={hero1} alt="" onClick={heroTwo} />
-            <img src={hero2} alt="" onClick={heroThree} />
-            <img src={hero2} alt="" onClick={heroFour} />
-            <img src={hero2} alt="" onClick={heroFive} />
-          </nav>
-        </div>
-        <div className={style.heroDiv} style={hero_change}>
-          <h1>
-            We build successful <br /> <b>Hospitality</b> businesses
-          </h1>
-          <p>
-            Build your hospitality business with us and achieve <br />{" "}
-            excellence in a shorter time.
-          </p>
-          <nav>
-            <button className={style.hero_btn}>Request Consultation</button>
-            <button className={style.hero_vid}>
-              <img src={vid} alt="" /> Watch Video
-            </button>
-          </nav>
-          <nav>
-            <img src={hero2} alt="" onClick={heroOne} />
-            <img src={hero2} alt="" onClick={heroTwo} />
-            <img src={hero1} alt="" onClick={heroThree} />
-            <img src={hero2} alt="" onClick={heroFour} />
-            <img src={hero2} alt="" onClick={heroFive} />
-          </nav>
-        </div>
-        <div className={style.heroDiv} style={hero_change}>
-          <h1>
-            We build successful <br /> <b>Hospitality</b> businesses
-          </h1>
-          <p>
-            Build your hospitality business with us and achieve <br />{" "}
-            excellence in a shorter time.
-          </p>
-          <nav>
-            <button className={style.hero_btn}>Request Consultation</button>
-            <button className={style.hero_vid}>
-              <img src={vid} alt="" /> Watch Video
-            </button>
-          </nav>
-          <nav>
-            <img src={hero2} alt="" onClick={heroOne} />
-            <img src={hero2} alt="" onClick={heroTwo} />
-            <img src={hero2} alt="" onClick={heroThree} />
-            <img src={hero1} alt="" onClick={heroFour} />
-            <img src={hero2} alt="" onClick={heroFive} />
-          </nav>
-        </div>
-        <div className={style.heroDiv} style={hero_change}>
-          <h1>
-            We build successful <br /> <b>Hospitality</b> businesses
-          </h1>
-          <p>
-            Build your hospitality business with us and achieve <br />{" "}
-            excellence in a shorter time.
-          </p>
-          <nav>
-            <button className={style.hero_btn}>Request Consultation</button>
-            <button className={style.hero_vid}>
-              <img src={vid} alt="" /> Watch Video
-            </button>
-          </nav>
-          <nav>
-            <img src={hero2} alt="" onClick={heroOne} />
-            <img src={hero2} alt="" onClick={heroTwo} />
-            <img src={hero2} alt="" onClick={heroThree} />
-            <img src={hero2} alt="" onClick={heroFour} />
-            <img src={hero1} alt="" onClick={heroFive} />
-          </nav>
-        </div>
+      <Rerousel itemRef={customerLogo}>
+        {deal.map((c) => {
+          return <img key={c} image={c} ref={customerLogo} alt=''/>;
+        })}
+      </Rerousel>
+      <section className={style.hero}>
+        <Rerousel itemRef={ref}>
+          <div
+            className={style.heroDiv}
+            ref={ref}
+            style={{ backgroundImage: `url(${herobg1})` }}
+          >
+            <h1>
+              We build successful <br /> <b>Hospitality</b> businesses
+            </h1>
+            <p>
+              Build your hospitality business with us and achieve <br />{" "}
+              excellence in a shorter time.
+            </p>
+            <nav>
+              <button className={style.hero_btn}>Request Consultation</button>
+              <button className={style.hero_vid}>
+                <img src={vid} alt="" /> Watch Video
+              </button>
+            </nav>
+            <nav>
+              <img src={hero1} alt="" />
+              <img src={hero2} alt="" />
+              <img src={hero2} alt="" />
+              <img src={hero2} alt="" />
+              <img src={hero2} alt="" />
+            </nav>
+          </div>
+          <div
+            className={style.heroDiv}
+            style={{
+              backgroundImage: `url(${herobg2})`,
+            }}
+          >
+            <h1>
+              Invest successfully in <br /> <b>hospitality</b> with us
+            </h1>
+            <p>
+              Build your hospitality business with us and achieve <br />{" "}
+              excellence in a shorter time.
+            </p>
+            <nav>
+              <button className={style.hero_btn}>Request Consultation</button>
+              <button className={style.hero_vid}>
+                <img src={vid} alt="" /> Watch Video
+              </button>
+            </nav>
+            <nav>
+              <img src={hero2} alt="" />
+              <img src={hero1} alt="" />
+              <img src={hero2} alt="" />
+              <img src={hero2} alt="" />
+              <img src={hero2} alt="" />
+            </nav>
+          </div>
+          <div
+            className={style.heroDiv}
+            style={{
+              backgroundImage: `url(${herobg3})`,
+            }}
+          >
+            <h1>
+              Enhance your asset <br /> and grow your <b> revenue </b>
+            </h1>
+            <p>
+              Build your hospitality business with us and achieve <br />{" "}
+              excellence in a shorter time.
+            </p>
+            <nav>
+              <button className={style.hero_btn}>Request Consultation</button>
+              <button className={style.hero_vid}>
+                <img src={vid} alt="" /> Watch Video
+              </button>
+            </nav>
+            <nav>
+              <img src={hero2} alt="" />
+              <img src={hero2} alt="" />
+              <img src={hero1} alt="" />
+              <img src={hero2} alt="" />
+              <img src={hero2} alt="" />
+            </nav>
+          </div>
+          <div
+            className={style.heroDiv}
+            style={{
+              backgroundImage: `url(${herobg4})`,
+            }}
+          >
+            <h1>
+              Raise your next project <br /> <b>funding</b> with us
+            </h1>
+            <p>
+              Build your hospitality business with us and achieve <br />{" "}
+              excellence in a shorter time.
+            </p>
+            <nav>
+              <button className={style.hero_btn}>Request Consultation</button>
+              <button className={style.hero_vid}>
+                <img src={vid} alt="" /> Watch Video
+              </button>
+            </nav>
+            <nav>
+              <img src={hero2} alt="" />
+              <img src={hero2} alt="" />
+              <img src={hero2} alt="" />
+              <img src={hero1} alt="" />
+              <img src={hero2} alt="" />
+            </nav>
+          </div>
+          <div
+            className={style.heroDiv}
+            style={{
+              backgroundImage: `url(${herobg5})`,
+            }}
+          >
+            <h1>
+              <b>Co-management</b> or <b>acquisition</b> <br /> with us is
+              stress free{" "}
+            </h1>
+            <p>
+              Build your hospitality business with us and achieve <br />{" "}
+              excellence in a shorter time.
+            </p>
+            <nav>
+              <button className={style.hero_btn}>Request Consultation</button>
+              <button className={style.hero_vid}>
+                <img src={vid} alt="" /> Watch Video
+              </button>
+            </nav>
+            <nav>
+              <img src={hero2} alt="" />
+              <img src={hero2} alt="" />
+              <img src={hero2} alt="" />
+              <img src={hero2} alt="" />
+              <img src={hero1} alt="" />
+            </nav>
+          </div>
+        </Rerousel>
       </section>
       <section className={style.partners}>
         <small>Over 100+ businesses growing with Jefferson Hospitality</small>
@@ -950,6 +1007,67 @@ export default function Home() {
           </nav>
         </div>
       </section>
+      <section className={style.started}>
+        <h3>Get Started</h3>
+        <section>
+          <figure>
+            <img src={started} alt="" />
+          </figure>
+          <div>
+            <nav>
+              <p>
+                Request a consultation if you not functioning at <br /> optimum
+                or not making money.
+              </p>
+              <Link to="/">
+                Request a Consultation <img src={exp} alt="" />{" "}
+              </Link>
+            </nav>
+            <nav>
+              <p>
+                Upscale your team with any of our training <br /> package.
+              </p>
+              <Link to="/">
+                Check training Calender <img src={expw} alt="" />{" "}
+              </Link>
+            </nav>
+            <nav>
+              <p>
+                Re-think your sourcing process and take advantage <br /> of our
+                easy online sourcing and procurement <br /> platform for
+                hospitality.
+              </p>
+              <Link to="/">
+                Visit Hospitalitte Shop <img src={expw} alt="" />{" "}
+              </Link>
+            </nav>
+            <nav>
+              <p>
+                Book a meeting if you considering a co-management, <br /> full
+                management, acquisition or looking for funding for <br /> your
+                next project.
+              </p>
+              <Link to="/">
+                Book a Meeting <img src={exp} alt="" />{" "}
+              </Link>
+            </nav>
+            <nav>
+              <p>
+                You are not left out if you are new to hospitality investment,{" "}
+                <br />
+                join the First Start Program of Jefferson Life for just $1,000
+                per <br /> annum and get unlimited consulting till you get your
+                first <br />
+                project started plus 10% discount on project fees.
+              </p>
+              <Link to="/">
+                Join Jefferson Life
+                <img src={exp} alt="" />
+              </Link>
+            </nav>
+          </div>
+        </section>
+      </section>
       <section className={style.deals}>
         <h3>Deals</h3>
         <div>
@@ -1301,6 +1419,7 @@ export default function Home() {
             <p>
               Successful hospitality <br /> businesses we’ve built
             </p>
+            <img src={star} alt="" />
             <span>5 star rating</span>
           </nav>
           <nav>
@@ -1460,6 +1579,32 @@ export default function Home() {
           </nav>
         </div>
       </section>
+      <section className={style.blog}>
+        <h3>Insight Blog</h3>
+        <section>
+          <div>
+            <nav>5 Essentials to defining your brand identity</nav>
+            <nav>
+              Sink or Swim? A survival guide for badly- performing businesses in
+              the Hospitality Industry.
+            </nav>
+          </div>
+          <div>
+            <nav>
+              Do I really need a consultant? The Growing Need for Consulting in
+              the Hospitality industry post-pandemic
+            </nav>
+            <nav>
+              Hospitality in the future: The five most important trends to jump
+              on
+            </nav>
+            <nav> Innovating for growth in restaurant & hospitality.</nav>
+          </div>
+        </section>
+        <Link to="/">
+          See more insight articles <img src={exp} alt="" />{" "}
+        </Link>
+      </section>
       <section className={style.jpart}>
         <div>
           <span></span>
@@ -1476,12 +1621,17 @@ export default function Home() {
           <img src={j6} alt="" />
         </div>
       </section>
-      <section className={style.subscribe}>
-        <h2>SUBSCRIBE TO OUR NEWSLETTER</h2>
+      <section className={style.tell}>
+        <h2>Got a Project in Mind? Tell Us More</h2>
         <p>
-          Our focus is on mid to upscale hotels, restaurants,nightlife venues,
-          and resorts intelligently designed with user experience
+          Drop us a line and we'll get back to you immediately to schedule a
+          call <br /> and discuss your needs personally.
         </p>
+        <button>Request Consultation</button>
+      </section>
+      <section className={style.border}></section>
+      <section className={style.subscribe}>
+        <strong>SUBSCRIBE TO OUR NEWSLETTER</strong>
         <label>
           <input type="email" placeholder="Enter your Email Address" />
           <button>Subscribe</button>
