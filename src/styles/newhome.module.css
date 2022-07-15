@@ -1660,11 +1660,14 @@
     background-size: 100px, 100px;
   }
   .tell h2 {
-    font-size: 30px;
+    font-size: 25px;
   }
   .tell p {
     font-size: 16px;
     margin: 20px 0;
+  }
+  .tell p br {
+    display: none;
   }
   .tell button {
     margin-bottom: 10px;

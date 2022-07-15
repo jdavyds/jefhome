@@ -1616,7 +1616,7 @@ export default function Home() {
         </div>
       </section>
       <section className={style.tell}>
-        <h2>Got a Project in Mind? Tell Us More</h2>
+        <h2>Got a Project in Mind? <br /> Tell Us More</h2>
         <p>
           Drop us a line and we'll get back to you immediately to schedule a
           call <br /> and discuss your needs personally.
