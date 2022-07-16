@@ -792,7 +792,7 @@
 }
 .started figure {
   width: 100%;
-  height: fit-content;
+  height: 100%;
 }
 .started figure img {
   width: 100%;
