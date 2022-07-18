@@ -48,20 +48,24 @@
   margin-right: 5px;
 }
 .main_head {
+  height: fit-content;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 100px 20px 90px;
+  padding: 0 100px 0 90px;
   box-shadow: 0 5px 5px 0px rgb(230, 225, 225);
 }
 .logo {
   height: 50px;
+  margin: 20px 0;
 }
-.main_head nav {
+.main_head > nav {
   width: 70%;
+  height: 100%;
   display: flex;
   justify-content: center;
   font-size: 15px;
+  position: relative;
 }
 header a {
   margin: 0 10px;
@@ -69,9 +73,15 @@ header a {
   text-decoration: none;
   transition: transform 0.6s ease-in-out;
 }
+header .main_head > nav > a {
+  padding: 40px 0;
+}
+.main_header > nav > a {
+  background-color: aqua;
+  min-height: 100%;
+}
 header a:hover {
   color: rgb(248, 169, 17);
-  transform: scale(1.1);
 }
 .main_head button {
   background: linear-gradient(
@@ -89,8 +99,60 @@ header a:hover {
   padding: 0 10px;
   cursor: pointer;
 }
+.main_head .closed {
+  display: none;
+}
 .ham {
   display: none;
+}
+.main_head .openOne {
+  position: absolute;
+  height: fit-content;
+  width: fit-content;
+  top: calc(100% + 5px);
+  left: 0px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px 50px 20px 40px;
+  display: flex;
+  flex-direction: column;
+}
+.main_head .openTwo {
+  position: absolute;
+  height: fit-content;
+  width: fit-content;
+  top: calc(100% + 5px);
+  left: 0px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.main_head .openThree {
+  position: absolute;
+  height: fit-content;
+  width: fit-content;
+  top: calc(100% + 5px);
+  left: 0px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.border {
+  border-bottom: 5px solid rgb(248, 169, 17);
+}
+.main_head .openOne a, .main_head .openTwo a, .main_head .openThree a {
+  margin: 15px 10px;
+  display: flex;
+  align-items: center;
+}
+.main_head .openOne img, .main_header .openTwo img, .main_head .openThree img {
+  height: 30px;
+  width: 30px;
+  margin-right: 5px;
 }
 .hideHam {
   display: none;

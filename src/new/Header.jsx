@@ -41,10 +41,12 @@ export default function Header() {
   function handleShow() {
     setHamNav(!hamNav);
   }
-  const [one, setOne] = useState(true);
+  const [one, setOne] = useState(false);
   const [two, setTwo] = useState(false);
   const [three, setThree] = useState(false);
-
+  const [mainOne, setMainOne] = useState(false);
+  const [mainTwo, setMainTwo] = useState(false);
+  const [mainThree, setMainThree] = useState(false);
   function handleOne() {
     setOne(!one);
     setTwo(false);
@@ -59,6 +61,21 @@ export default function Header() {
     setThree(!three);
     setOne(false);
     setTwo(false);
+  }
+  function handleMainOne() {
+    setMainOne(!mainOne);
+    setMainTwo(false);
+    setMainThree(false);
+  }
+  function handleMainTwo() {
+    setMainTwo(!mainTwo);
+    setMainOne(false);
+    setMainThree(false);
+  }
+  function handleMainThree() {
+    setMainThree(!mainThree);
+    setMainOne(false);
+    setMainTwo(false);
   }
   return (
     <header className={sticky ? style.sticky : ""}>
@@ -83,9 +100,150 @@ export default function Header() {
           <img src={logo} alt="" className={style.logo} />
         </NavLink>
         <nav>
-          <NavLink to="/about">About</NavLink>
-          <NavLink to="/services">Services</NavLink>
-          <NavLink to="/invest-in-hospitality">Invest in Hospitality</NavLink>
+          <NavLink
+            to="#"
+            onClick={handleMainOne}
+            className={mainOne ? style.border : ""}
+          >
+            About
+          </NavLink>
+          <nav className={mainOne ? style.openOne : style.closed}>
+            <NavLink to="/">
+              <img src={header1} alt="" />
+              Teams
+            </NavLink>
+            <NavLink to="/">
+              <img src={header2} alt="" />
+              Culture
+            </NavLink>
+            <NavLink to="/">
+              <img src={header3} alt="" />
+              Brands
+            </NavLink>
+            <NavLink to="/">
+              <img src={header4} alt="" />
+              Awards
+            </NavLink>
+            <NavLink to="/">
+              <img src={header5} alt="" />
+              Careers
+            </NavLink>
+          </nav>
+          <NavLink
+            to="#"
+            onClick={handleMainTwo}
+            className={mainTwo ? style.border : ""}
+          >
+            Services
+          </NavLink>
+          <nav className={mainTwo ? style.openTwo : style.closed}>
+            <NavLink to="/">
+              <img src={header1} alt="" />
+              Hotel Consulting
+            </NavLink>
+            <NavLink to="/">
+              <img src={header2} alt="" />
+              Project development
+            </NavLink>
+            <NavLink to="/">
+              <img src={header3} alt="" />
+              Revenue Management
+            </NavLink>
+            <NavLink to="/">
+              <img src={header4} alt="" />
+              Investment and Acquisition
+            </NavLink>
+            <NavLink to="/">
+              <img src={header5} alt="" />
+              Fund Raising
+            </NavLink>
+            <NavLink to="/">
+              <img src={header6} alt="" />
+              Food and Beverage Innovation
+            </NavLink>
+            <NavLink to="/">
+              <img src={header7} alt="" />
+              Contract Catering
+            </NavLink>
+            <NavLink to="/">
+              <img src={header8} alt="" />
+              Set up and Growth
+            </NavLink>
+            <NavLink to="/">
+              <img src={header9} alt="" />
+              Asset Enhancement
+            </NavLink>
+            <NavLink to="/">
+              <img src={header10} alt="" />
+              Franchising
+            </NavLink>
+            <NavLink to="/">
+              <img src={header11} alt="" />
+              Partnership Brokerage
+            </NavLink>
+            <NavLink to="/">
+              <img src={header12} alt="" />
+              Hospitality PPP
+            </NavLink>
+            <NavLink to="/">
+              <img src={header13} alt="" />
+              Training
+            </NavLink>
+            <NavLink to="/">
+              <img src={header14} alt="" />
+              Consultancy
+            </NavLink>
+            <NavLink to="/">
+              <img src={header15} alt="" />
+              Recruitment and Training
+            </NavLink>
+          </nav>
+
+          <NavLink
+            to="#"
+            onClick={handleMainThree}
+            className={mainThree ? style.border : ""}
+          >
+            Invest in Hospitality
+          </NavLink>
+          <nav className={mainThree ? style.openThree : style.closed}>
+            <NavLink to="/">
+              <img src={header1} alt="" />
+              Hotel and Resort
+            </NavLink>
+            <NavLink to="/">
+              <img src={header2} alt="" />
+              Restaurant and Bar
+            </NavLink>
+            <NavLink to="/">
+              <img src={header3} alt="" />
+              Clubs/Casinos
+            </NavLink>
+            <NavLink to="/">
+              <img src={header4} alt="" />
+              Parks and Gardens
+            </NavLink>
+            <NavLink to="/">
+              <img src={header5} alt="" />
+              Cruise Line
+            </NavLink>
+            <NavLink to="/">
+              <img src={header6} alt="" />
+              Distinctive Event Centers
+            </NavLink>
+            <NavLink to="/">
+              <img src={header7} alt="" />
+              Health, Wellness and Spa
+            </NavLink>
+            <NavLink to="/">
+              <img src={header8} alt="" />
+              Residential Lifestyle
+            </NavLink>
+            <NavLink to="/">
+              <img src={header9} alt="" />
+              Short Lets
+            </NavLink>
+          </nav>
           <NavLink to="/collections">Collections</NavLink>
           <NavLink to="/jefferson-life">Jefferson Life</NavLink>
           <NavLink to="/contact-us">Contact Us</NavLink>
@@ -99,6 +257,7 @@ export default function Header() {
         </div>
         <Outlet />
       </div>
+
       <div className={hamNav ? style.hamHead : style.hideHam}>
         <nav>
           <span>
@@ -212,7 +371,7 @@ export default function Header() {
           </NavLink>
           <NavLink to="/" className={three ? style.open : style.closed}>
             <img src={header2} alt="" />
-            Resturant and Bar
+            Restaurant and Bar
           </NavLink>
           <NavLink to="/" className={three ? style.open : style.closed}>
             <img src={header3} alt="" />
@@ -242,6 +401,7 @@ export default function Header() {
             <img src={header9} alt="" />
             Short Lets
           </NavLink>
+
           <NavLink to="/collections">Collections</NavLink>
           <NavLink to="/jefferson-life">Jefferson Life</NavLink>
           <NavLink to="/contact-us">Contact Us</NavLink>
