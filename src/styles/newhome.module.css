@@ -1372,73 +1372,53 @@
 }
 .blog section {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
   margin: 50px 0;
-}
-.blog section div:first-of-type {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 49% 49%;
-  justify-content: space-between;
-}
-.blog section div:last-of-type {
-  margin: 5px 0;
-  display: grid;
-  grid-template-columns: 32% 32% 32%;
-  justify-content: space-between;
-}
-.blog section div nav {
-  height: auto;
-  width: 100%;
-  padding: 20px;
-  border-radius: 10px;
-  color: white;
   display: flex;
-  align-items: flex-end;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.blog section nav {
+  display: flex;
   justify-content: flex-start;
+  align-items: flex-end;
   font-size: 20px;
-}
-.blog section div:first-of-type nav {
-  height: 400px;
-  background-color: antiquewhite;
-}
-.blog section div:last-of-type nav {
-  height: 300px;
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px 0;
   background-color: forestgreen;
-}
-.blog section div:first-of-type nav:first-of-type {
   background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: transform 0.8s ease-in-out;
+}
+.blog section nav:first-of-type {
+  height: 400px;
+  width: 49%;
   background-image: url(./../assets/blog1.png);
-  background-size: cover;
-  background-repeat: no-repeat;
 }
-.blog section div:first-of-type nav:last-of-type {
-  background-position: center;
+.blog section nav:nth-of-type(2) {
+  height: 400px;
+  width: 49%;
   background-image: url(./../assets/blog2.png);
-  background-size: cover;
-  background-repeat: no-repeat;
 }
-.blog section div:last-of-type nav:first-of-type {
-  background-position: center;
+.blog section nav:nth-last-of-type(3) {
+  height: 300px;
+  width: 32%;
   background-image: url(./../assets/blog3.png);
-  background-size: cover;
-  background-repeat: no-repeat;
 }
-.blog section div:last-of-type nav:nth-of-type(2) {
-  background-position: center;
+.blog section nav:nth-of-type(4) {
+  height: 300px;
+  width: 32%;
   background-image: url(./../assets/blog4.png);
-  background-size: cover;
-  background-repeat: no-repeat;
 }
-.blog section div:last-of-type nav:last-of-type {
-  background-position: center;
+.blog section nav:last-of-type {
+  height: 300px;
+  width: 32%;
   background-image: url(./../assets/blog5.png);
-  background-size: cover;
-  background-repeat: no-repeat;
+}
+.blog > nav {
+  display: none;
 }
 @media only screen and (max-width: 850px) {
   .blog {
@@ -1457,26 +1437,57 @@
     margin: 0 5px;
     height: 15px;
   }
-  .blog section div:first-of-type {
+  .blog > nav {
     display: flex;
-    flex-direction: column;
+    align-items: center;
   }
-  .blog section div:last-of-type {
-    display: flex;
-    flex-direction: column;
+  .blog > nav button {
+    border: none;
+    background: inherit;
+    margin: 5px;
   }
-  .blog section div nav {
-    padding: 10px;
+  .blog > nav button:first-of-type {
+    margin-right: 20px;
+  }
+  .blog > nav button:last-of-type {
+    margin-left: 20px;
+  }
+  .blog section {
+    width: 100%;
+    flex-wrap: nowrap;
+    overflow: scroll;
+  }
+  .blog section::-webkit-scrollbar {
+    display: none;
+  }
+  .blog section nav {
     font-size: 18px;
-    margin: 10px 0;
-    position: relative;
-    z-index: 222;
+    padding: 15px;
   }
-  .blog section div:first-of-type nav {
+  .blog section nav:first-of-type {
     height: calc(100vw - 30px);
+    width: 100%;
+    min-width: 100%;
   }
-  .blog section div:last-of-type nav {
+  .blog section nav:nth-of-type(2) {
     height: calc(100vw - 30px);
+    width: 100%;
+    min-width: 100%;
+  }
+  .blog section nav:nth-last-of-type(3) {
+    height: calc(100vw - 30px);
+    width: 100%;
+    min-width: 100%;
+  }
+  .blog section nav:nth-of-type(4) {
+    height: calc(100vw - 30px);
+    width: 100%;
+    min-width: 100%;
+  }
+  .blog section nav:last-of-type {
+    height: calc(100vw - 30px);
+    width: 100%;
+    min-width: 100%;
   }
 }
 .jpart {

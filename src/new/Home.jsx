@@ -97,6 +97,7 @@ export default function Home() {
   const [test, setTest] = useState(0);
   const [dbg, setDbg] = useState(dealImg);
   const [deal, setDeal] = useState(Deals.one);
+  const [blog, setBlog] = useState(0);
   // function heroOne() {
   //   setTrans(0);
   // }
@@ -296,6 +297,58 @@ export default function Home() {
   };
   const ref = useRef(null);
 
+  function blogOne() {
+    setBlog(0);
+  }
+  function blogTwo() {
+    setBlog(-100);
+  }
+  function blogThree() {
+    setBlog(-200);
+  }
+  function blogFour() {
+    setBlog(-300);
+  }
+  function blogFive() {
+    setBlog(-400);
+  }
+  function blogNext() {
+    if (blog === 0) {
+      setBlog(-100);
+    }
+    if (blog === -100) {
+      setBlog(-200);
+    }
+    if (blog === -200) {
+      setBlog(-300);
+    }
+    if (blog === -300) {
+      setBlog(-400);
+    }
+    if (blog === -400) {
+      return;
+    }
+  }
+  function blogPrev() {
+    if (blog === -400) {
+      setBlog(-300);
+    }
+    if (blog === -300) {
+      setBlog(-200);
+    }
+    if (blog === -200) {
+      setBlog(-100);
+    }
+    if (blog === -100) {
+      setBlog(0);
+    }
+    if (blog === 0) {
+      return;
+    }
+  }
+  let blog_style = {
+    transform: "translateX(" + blog + "% )",
+  };
   return (
     <div>
       <Header />
@@ -1581,25 +1634,48 @@ export default function Home() {
       <section className={style.blog}>
         <h3>Insight Blog</h3>
         <section>
-          <div>
-            <nav>5 Essentials to defining your brand identity</nav>
-            <nav>
+            <nav style={blog_style}>
+              5 Essentials to defining your brand identity
+            </nav>
+            <nav style={blog_style}>
               Sink or Swim? A survival guide for badly- performing businesses in
               the Hospitality Industry.
             </nav>
-          </div>
-          <div>
-            <nav>
+            <nav style={blog_style}>
               Do I really need a consultant? The Growing Need for Consulting in
               the Hospitality industry post-pandemic
             </nav>
-            <nav>
+            <nav style={blog_style}>
               Hospitality in the future: The five most important trends to jump
               on
             </nav>
-            <nav> Innovating for growth in restaurant & hospitality.</nav>
-          </div>
+            <nav style={blog_style}>
+              Innovating for growth in restaurant & hospitality.
+            </nav>
         </section>
+        <nav>
+          <button>
+            <img src={left} alt="" onClick={blogPrev} />
+          </button>
+          <button>
+            <img src={blog === 0 ? dot1 : dot2} alt="" onClick={blogOne} />
+          </button>
+          <button>
+            <img src={blog === -100 ? dot1 : dot2} alt="" onClick={blogTwo} />
+          </button>
+          <button>
+            <img src={blog === -200 ? dot1 : dot2} alt="" onClick={blogThree} />
+          </button>
+          <button>
+            <img src={blog === -300 ? dot1 : dot2} alt="" onClick={blogFour} />
+          </button>
+          <button>
+            <img src={blog === -400 ? dot1 : dot2} alt="" onClick={blogFive} />
+          </button>
+          <button>
+            <img src={right} alt="" onClick={blogNext} />
+          </button>
+        </nav>
         <Link to="/">
           See more insight articles <img src={exp} alt="" />{" "}
         </Link>
