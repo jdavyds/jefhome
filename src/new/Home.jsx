@@ -300,7 +300,7 @@ export default function Home() {
     <div>
       <Header />
       <section className={style.hero}>
-        <Rerousel itemRef={ref} interval={10000} >
+        <Rerousel itemRef={ref} interval={10000}>
           <div
             className={style.heroDiv}
             ref={ref}
@@ -506,6 +506,7 @@ export default function Home() {
         <h3>Our team excels in</h3>
         <div>
           <nav>
+            <h4>HOTEL CONSULTING</h4>
             <img src={service1} alt="" />
             <h4>HOTEL CONSULTING</h4>
             <p>
@@ -536,6 +537,7 @@ export default function Home() {
           </nav>
           <div className={style.serviceGrid}>
             <nav>
+              <h4>SETUP AND GROWTH</h4>
               <img src={service2} alt="" />
               <h4>SETUP AND GROWTH</h4>
               <p>
@@ -548,6 +550,7 @@ export default function Home() {
               </Link>
             </nav>
             <nav>
+              <h4>PROJECT FUNDING</h4>
               <img src={service3} alt="" />
               <h4>PROJECT FUNDING</h4>
               <p>
@@ -560,6 +563,7 @@ export default function Home() {
               </Link>
             </nav>
             <nav>
+              <h4>ASSET ENHANCEMENT</h4>
               <img src={service4} alt="" />
               <h4>ASSET ENHANCEMENT</h4>
               <p>
@@ -572,6 +576,7 @@ export default function Home() {
               </Link>
             </nav>
             <nav>
+              <h4>REVENUE MANAGEMENT</h4>
               <img src={service5} alt="" />
               <h4>REVENUE MANAGEMENT</h4>
               <p>
@@ -1616,7 +1621,9 @@ export default function Home() {
         </div>
       </section>
       <section className={style.tell}>
-        <h2>Got a Project in Mind? <br /> Tell Us More</h2>
+        <h2>
+          Got a Project in Mind? <br /> Tell Us More
+        </h2>
         <p>
           Drop us a line and we'll get back to you immediately to schedule a
           call <br /> and discuss your needs personally.

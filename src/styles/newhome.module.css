@@ -243,6 +243,7 @@
     padding: 15px;
     display: flex;
     justify-content: flex-start;
+    overflow-y: hidden;
     overflow-x: scroll;
   }
   .partners figure img {
@@ -303,6 +304,7 @@
   opacity: 0.6;
   font-size: 30px;
 }
+
 .services > div {
   margin: 30px 0;
   display: grid;
@@ -323,9 +325,12 @@
   width: 100%;
   height: auto;
 }
-.services h4 {
+.services h4:last-of-type {
   margin: 10px 0;
   font-size: 20px;
+}
+.services h4:first-of-type {
+  display: none;
 }
 .services p {
   line-height: 1.7;
@@ -469,9 +474,13 @@
     padding-right: unset;
     font-size: 14px;
   }
-  .services h4 {
+  .services h4:first-of-type {
+    display: block;
     margin: 10px 0;
     font-size: 18px;
+  }
+  .services h4:last-of-type {
+    display: none;
   }
   .services p {
     font-size: 14px;
